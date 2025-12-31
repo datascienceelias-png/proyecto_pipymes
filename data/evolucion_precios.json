@@ -1,0 +1,740 @@
+{
+  "2024-01": {
+    "arroz": {
+      "unit": "lb",
+      "min": 150.0,
+      "max": 250.0
+    },
+    "huevo": {
+      "unit": "unidad",
+      "min": 73.33,
+      "max": 120.0
+    },
+    "lomo de cerdo": {
+      "unit": "lb",
+      "min": 430.0,
+      "max": 680.0
+    },
+    "pierna de cerdo": {
+      "unit": "lb",
+      "min": 430.0,
+      "max": 680.0
+    },
+    "frijoles negros": {
+      "unit": "lb",
+      "min": 250.0,
+      "max": 550.0
+    },
+    "frijoles colorados": {
+      "unit": "lb",
+      "min": 250.0,
+      "max": 550.0
+    }
+  },
+  "2024-02": {
+    "arroz": {
+      "unit": "lb",
+      "min": 150.0,
+      "max": 250.0
+    },
+    "huevo": {
+      "unit": "unidad",
+      "min": 80.0,
+      "max": 100.0
+    },
+    "lomo de cerdo": {
+      "unit": "lb",
+      "min": 500.0,
+      "max": 800.0
+    },
+    "pierna de cerdo": {
+      "unit": "lb",
+      "min": 500.0,
+      "max": 800.0
+    },
+    "frijoles negros": {
+      "unit": "lb",
+      "min": 250.0,
+      "max": 480.0
+    },
+    "frijoles colorados": {
+      "unit": "lb",
+      "min": 150.0,
+      "max": 480.0
+    }
+  },
+  "2024-03": {
+    "arroz": {
+      "unit": "lb",
+      "min": 170.0,
+      "max": 300.0
+    },
+    "huevo": {
+      "unit": "unidad",
+      "min": 81.66,
+      "max": 100.0
+    },
+    "lomo de cerdo": {
+      "unit": "lb",
+      "min": 530.0,
+      "max": 800.0
+    },
+    "pierna de cerdo": {
+      "unit": "lb",
+      "min": 530.0,
+      "max": 800.0
+    },
+    "frijoles negros": {
+      "unit": "lb",
+      "min": 240.0,
+      "max": 460.0
+    },
+    "frijoles colorados": {
+      "unit": "lb",
+      "min": 240.0,
+      "max": 460.0
+    }
+  },
+  "2024-04": {
+    "arroz": {
+      "unit": "lb",
+      "min": 160.0,
+      "max": 240.0
+    },
+    "huevo": {
+      "unit": "unidad",
+      "min": 85.0,
+      "max": 100.0
+    },
+    "lomo de cerdo": {
+      "unit": "lb",
+      "min": 700.0,
+      "max": 1000.0
+    },
+    "pierna de cerdo": {
+      "unit": "lb",
+      "min": 700.0,
+      "max": 1000.0
+    },
+    "frijoles negros": {
+      "unit": "lb",
+      "min": 240.0,
+      "max": 450.0
+    },
+    "frijoles colorados": {
+      "unit": "lb",
+      "min": 240.0,
+      "max": 550.0
+    }
+  },
+  "2024-05": {
+    "arroz": {
+      "unit": "lb",
+      "min": 190.0,
+      "max": 295.45
+    },
+    "huevo": {
+      "unit": "unidad",
+      "min": 86.66,
+      "max": 130.0
+    },
+    "lomo de cerdo": {
+      "unit": "lb",
+      "min": 550.0,
+      "max": 800.0
+    },
+    "pierna de cerdo": {
+      "unit": "lb",
+      "min": 550.0,
+      "max": 800.0
+    },
+    "frijoles negros": {
+      "unit": "lb",
+      "min": 240.0,
+      "max": 450.0
+    },
+    "frijoles colorados": {
+      "unit": "lb",
+      "min": 240.0,
+      "max": 550.0
+    }
+  },
+  "2024-06": {
+    "arroz": {
+      "unit": "lb",
+      "min": 170.0,
+      "max": 295.45
+    },
+    "huevo": {
+      "unit": "unidad",
+      "min": 76.66,
+      "max": 83.33
+    },
+    "lomo de cerdo": {
+      "unit": "lb",
+      "min": 600.0,
+      "max": 850.0
+    },
+    "pierna de cerdo": {
+      "unit": "lb",
+      "min": 600.0,
+      "max": 850.0
+    },
+    "frijoles negros": {
+      "unit": "lb",
+      "min": 290.0,
+      "max": 500.0
+    },
+    "frijoles colorados": {
+      "unit": "lb",
+      "min": 290.0,
+      "max": 550.0
+    }
+  },
+  "2024-07": {
+    "arroz": {
+      "unit": "lb",
+      "min": 160.0,
+      "max": 318.18
+    },
+    "huevo": {
+      "unit": "unidad",
+      "min": 90.0,
+      "max": 120.0
+    },
+    "lomo de cerdo": {
+      "unit": "lb",
+      "min": 600.0,
+      "max": 850.0
+    },
+    "pierna de cerdo": {
+      "unit": "lb",
+      "min": 600.0,
+      "max": 850.0
+    },
+    "frijoles negros": {
+      "unit": "lb",
+      "min": 290.0,
+      "max": 500.0
+    },
+    "frijoles colorados": {
+      "unit": "lb",
+      "min": 290.0,
+      "max": 550.0
+    }
+  },
+  "2024-08": {
+    "arroz": {
+      "unit": "lb",
+      "min": 170.0,
+      "max": 295.45
+    },
+    "huevo": {
+      "unit": "unidad",
+      "min": 76.67,
+      "max": 116.66
+    },
+    "lomo de cerdo": {
+      "unit": "lb",
+      "min": 550.0,
+      "max": 850.0
+    },
+    "pierna de cerdo": {
+      "unit": "lb",
+      "min": 600.0,
+      "max": 850.0
+    },
+    "frijoles negros": {
+      "unit": "lb",
+      "min": 290.0,
+      "max": 500.0
+    },
+    "frijoles colorados": {
+      "unit": "lb",
+      "min": 290.0,
+      "max": 550.0
+    }
+  },
+  "2024-09": {
+    "arroz": {
+      "unit": "lb",
+      "min": 180.0,
+      "max": 650.0
+    },
+    "huevo": {
+      "unit": "unidad",
+      "min": 83.33,
+      "max": 130.0
+    },
+    "lomo de cerdo": {
+      "unit": "lb",
+      "min": 600.0,
+      "max": 980.0
+    },
+    "pierna de cerdo": {
+      "unit": "lb",
+      "min": 600.0,
+      "max": 980.0
+    },
+    "frijoles negros": {
+      "unit": "lb",
+      "min": 300.0,
+      "max": 360.0
+    },
+    "frijoles colorados": {
+      "unit": "lb",
+      "min": 320.0,
+      "max": 360.0
+    }
+  },
+  "2024-10": {
+    "arroz": {
+      "unit": "lb",
+      "min": 150.0,
+      "max": 295.45
+    },
+    "huevo": {
+      "unit": "unidad",
+      "min": 80.0,
+      "max": 130.0
+    },
+    "lomo de cerdo": {
+      "unit": "lb",
+      "min": 600.0,
+      "max": 980.0
+    },
+    "pierna de cerdo": {
+      "unit": "lb",
+      "min": 650.0,
+      "max": 980.0
+    },
+    "frijoles negros": {
+      "unit": "lb",
+      "min": 300.0,
+      "max": 370.0
+    },
+    "frijoles colorados": {
+      "unit": "lb",
+      "min": 320.0,
+      "max": 400.0
+    }
+  },
+  "2024-11": {
+    "arroz": {
+      "unit": "lb",
+      "min": 150.0,
+      "max": 318.18
+    },
+    "huevo": {
+      "unit": "unidad",
+      "min": 85.0,
+      "max": 120.0
+    },
+    "lomo de cerdo": {
+      "unit": "lb",
+      "min": 600.0,
+      "max": 980.0
+    },
+    "pierna de cerdo": {
+      "unit": "lb",
+      "min": 600.0,
+      "max": 980.0
+    },
+    "frijoles negros": {
+      "unit": "lb",
+      "min": 300.0,
+      "max": 400.0
+    },
+    "frijoles colorados": {
+      "unit": "lb",
+      "min": 320.0,
+      "max": 450.0
+    }
+  },
+  "2024-12": {
+    "arroz": {
+      "unit": "lb",
+      "min": 160.0,
+      "max": 318.18
+    },
+    "huevo": {
+      "unit": "unidad",
+      "min": 90.0,
+      "max": 120.0
+    },
+    "lomo de cerdo": {
+      "unit": "lb",
+      "min": 600.0,
+      "max": 980.0
+    },
+    "pierna de cerdo": {
+      "unit": "lb",
+      "min": 660.0,
+      "max": 980.0
+    },
+    "frijoles negros": {
+      "unit": "lb",
+      "min": 300.0,
+      "max": 400.0
+    },
+    "frijoles colorados": {
+      "unit": "lb",
+      "min": 330.0,
+      "max": 450.0
+    }
+  },
+  "2025-01": {
+    "arroz": {
+      "unit": "lb",
+      "min": 180.0,
+      "max": 318.18
+    },
+    "huevo": {
+      "unit": "unidad",
+      "min": 100.0,
+      "max": 120.0
+    },
+    "lomo de cerdo": {
+      "unit": "lb",
+      "min": 780.0,
+      "max": 980.0
+    },
+    "pierna de cerdo": {
+      "unit": "lb",
+      "min": 780.0,
+      "max": 980.0
+    },
+    "frijoles negros": {
+      "unit": "lb",
+      "min": 350.0,
+      "max": 400.0
+    },
+    "frijoles colorados": {
+      "unit": "lb",
+      "min": 350.0,
+      "max": 450.0
+    }
+  },
+  "2025-02": {
+    "arroz": {
+      "unit": "lb",
+      "min": 220.0,
+      "max": 340.9
+    },
+    "huevo": {
+      "unit": "unidad",
+      "min": 86.66,
+      "max": 116.66
+    },
+    "lomo de cerdo": {
+      "unit": "lb",
+      "min": 780.0,
+      "max": 980.0
+    },
+    "pierna de cerdo": {
+      "unit": "lb",
+      "min": 780.0,
+      "max": 980.0
+    },
+    "frijoles negros": {
+      "unit": "lb",
+      "min": 350.0,
+      "max": 400.0
+    },
+    "frijoles colorados": {
+      "unit": "lb",
+      "min": 320.0,
+      "max": 450.0
+    }
+  },
+  "2025-03": {
+    "arroz": {
+      "unit": "lb",
+      "min": 180.0,
+      "max": 340.9
+    },
+    "huevo": {
+      "unit": "unidad",
+      "min": 73.33,
+      "max": 100.0
+    },
+    "lomo de cerdo": {
+      "unit": "lb",
+      "min": 800.0,
+      "max": 1000.0
+    },
+    "pierna de cerdo": {
+      "unit": "lb",
+      "min": 800.0,
+      "max": 1000.0
+    },
+    "frijoles negros": {
+      "unit": "lb",
+      "min": 285.0,
+      "max": 400.0
+    },
+    "frijoles colorados": {
+      "unit": "lb",
+      "min": 285.0,
+      "max": 450.0
+    }
+  },
+  "2025-04": {
+    "arroz": {
+      "unit": "lb",
+      "min": 180.0,
+      "max": 340.9
+    },
+    "huevo": {
+      "unit": "unidad",
+      "min": 66.66,
+      "max": 83.33
+    },
+    "lomo de cerdo": {
+      "unit": "lb",
+      "min": 800.0,
+      "max": 1000.0
+    },
+    "pierna de cerdo": {
+      "unit": "lb",
+      "min": 800.0,
+      "max": 1000.0
+    },
+    "frijoles negros": {
+      "unit": "lb",
+      "min": 285.0,
+      "max": 400.0
+    },
+    "frijoles colorados": {
+      "unit": "lb",
+      "min": 285.0,
+      "max": 400.0
+    }
+  },
+  "2025-05": {
+    "arroz": {
+      "unit": "lb",
+      "min": 250.0,
+      "max": 340.9
+    },
+    "huevo": {
+      "unit": "unidad",
+      "min": 70.0,
+      "max": 100.0
+    },
+    "lomo de cerdo": {
+      "unit": "lb",
+      "min": 700.0,
+      "max": 1000.0
+    },
+    "pierna de cerdo": {
+      "unit": "lb",
+      "min": 700.0,
+      "max": 1000.0
+    },
+    "frijoles negros": {
+      "unit": "lb",
+      "min": 300.0,
+      "max": 450.0
+    },
+    "frijoles colorados": {
+      "unit": "lb",
+      "min": 300.0,
+      "max": 450.0
+    }
+  },
+  "2025-06": {
+    "arroz": {
+      "unit": "lb",
+      "min": 250.0,
+      "max": 340.9
+    },
+    "huevo": {
+      "unit": "unidad",
+      "min": 90.0,
+      "max": 120.0
+    },
+    "lomo de cerdo": {
+      "unit": "lb",
+      "min": 800.0,
+      "max": 1000.0
+    },
+    "pierna de cerdo": {
+      "unit": "lb",
+      "min": 800.0,
+      "max": 1000.0
+    },
+    "frijoles negros": {
+      "unit": "lb",
+      "min": 285.0,
+      "max": 400.0
+    },
+    "frijoles colorados": {
+      "unit": "lb",
+      "min": 285.0,
+      "max": 450.0
+    }
+  },
+  "2025-07": {
+    "arroz": {
+      "unit": "lb",
+      "min": 250.0,
+      "max": 340.9
+    },
+    "huevo": {
+      "unit": "unidad",
+      "min": 90.0,
+      "max": 120.0
+    },
+    "lomo de cerdo": {
+      "unit": "lb",
+      "min": 800.0,
+      "max": 1000.0
+    },
+    "pierna de cerdo": {
+      "unit": "lb",
+      "min": 800.0,
+      "max": 1000.0
+    },
+    "frijoles negros": {
+      "unit": "lb",
+      "min": 285.0,
+      "max": 400.0
+    },
+    "frijoles colorados": {
+      "unit": "lb",
+      "min": 285.0,
+      "max": 450.0
+    }
+  },
+  "2025-08": {
+    "arroz": {
+      "unit": "lb",
+      "min": 250.0,
+      "max": 327.27
+    },
+    "huevo": {
+      "unit": "unidad",
+      "min": 86.66,
+      "max": 100.0
+    },
+    "lomo de cerdo": {
+      "unit": "lb",
+      "min": 800.0,
+      "max": 1000.0
+    },
+    "pierna de cerdo": {
+      "unit": "lb",
+      "min": 800.0,
+      "max": 1000.0
+    },
+    "frijoles negros": {
+      "unit": "lb",
+      "min": 350.0,
+      "max": 450.0
+    },
+    "frijoles colorados": {
+      "unit": "lb",
+      "min": 300.0,
+      "max": 450.0
+    }
+  },
+  "2025-09": {
+    "arroz": {
+      "unit": "lb",
+      "min": 250.0,
+      "max": 340.9
+    },
+    "huevo": {
+      "unit": "unidad",
+      "min": 90.0,
+      "max": 120.0
+    },
+    "lomo de cerdo": {
+      "unit": "lb",
+      "min": 800.0,
+      "max": 1000.0
+    },
+    "pierna de cerdo": {
+      "unit": "lb",
+      "min": 800.0,
+      "max": 1000.0
+    },
+    "frijoles negros": {
+      "unit": "lb",
+      "min": 285.0,
+      "max": 400.0
+    },
+    "frijoles colorados": {
+      "unit": "lb",
+      "min": 285.0,
+      "max": 450.0
+    }
+  },
+  "2025-10": {
+    "arroz": {
+      "unit": "lb",
+      "min": 200.0,
+      "max": 331.81
+    },
+    "huevo": {
+      "unit": "unidad",
+      "min": 83.33,
+      "max": 100.0
+    },
+    "lomo de cerdo": {
+      "unit": "lb",
+      "min": 700.0,
+      "max": 1000.0
+    },
+    "pierna de cerdo": {
+      "unit": "lb",
+      "min": 700.0,
+      "max": 1000.0
+    },
+    "frijoles negros": {
+      "unit": "lb",
+      "min": 300.0,
+      "max": 400.0
+    },
+    "frijoles colorados": {
+      "unit": "lb",
+      "min": 300.0,
+      "max": 400.0
+    }
+  
+  },
+   
+  "2025-11": {
+    "arroz": {
+      "unit": "lb",
+      "min":200 ,
+      "max": 200
+    },
+    "huevo": {
+      "unit": "unidad",
+      "min": 90,
+      "max": 120.0
+    },
+    "lomo de cerdo": {
+      "unit": "lb",
+      "min": 800,
+      "max": 1150.0
+    },
+    "pierna de cerdo": {
+      "unit": "lb",
+      "min": 800,
+      "max": 950
+    },
+    "frijoles negros": {
+      "unit": "lb",
+      "min": 370,
+      "max": 400.0
+    },
+    "frijoles colorados": {
+      "unit": "lb",
+      "min": 350.0,
+      "max": 450.0
+    }
+  }
+}

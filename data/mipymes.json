@@ -1,0 +1,497 @@
+{
+  "mipyme": [ {
+      "id": 1,
+      "nombre": "Para Cuba",
+      "location": "23.12840603190212, -82.39201636466132",
+      "addrees": "Calle 4 entre Zapata y 31",
+    
+      "productos": [ 
+    {"nombre": "huevo", "cantidad": 30,"unidad": "unidad", "precio": 3000},
+    {"nombre": "muslo de pollo", "cantidad":1727.57, "unidad": "g", "precio": 2200},   
+    {"nombre": "lomo de cerdo", "cantidad": 453.592,"unidad": "g", "precio": 1000}, 
+    {"nombre": "molleja de pollo", "cantidad": 1000, "unidad": "g", "precio": 1000}, 
+    {"nombre": "higado de pollo", "cantidad": 1000, "unidad": "g", "precio": 1000},
+    {"nombre": "picadillo de pollo", "cantidad": 500, "unidad": "g", "precio": 360},
+    {"nombre": "codito", "cantidad": 250, "unidad": "g", "precio": 250},
+   {"nombre": "espaguetis", "cantidad": 520, "unidad": "g", "precio": 400},
+    {"nombre": "arroz", "cantidad": 1000, "unidad": "g", "precio": 700},
+    {"nombre": "leche de vaca", "marca": "Vima", "cantidad": 1030, "unidad": "g", "precio": 1000}
+
+
+    ]},
+
+        { "id": 2,
+        "nombre": "AgroAdrian",
+        "location": "23.127007,-82.397911",
+        "address": "Calle 10 entre 25 y 26",  
+         
+    "productos": [ 
+    {"nombre": "lomo de cerdo", "cantidad": 453.592, "unidad": "g", "precio": 1300},
+    {"nombre": "muslo de pollo", "cantidad": 1727.57, "unidad": "g", "precio": 2200},
+    {"nombre": "pierna de cerdo", "cantidad": 453.592, "unidad": "g", "precio": 1200},
+    {"nombre": "pechuga de pollo", "cantidad": 2000, "unidad": "g", "precio": 5500},
+    {"nombre": "solmillo de cerdo", "cantidad": 453.592, "unidad": "g", "precio": 1300},
+    {"nombre": "higado de pollo", "cantidad": 1000, "unidad": "g", "precio": 830},
+    {"nombre": "leche de vaca", "marca": "Vima", "cantidad": 1030, "unidad": "g", "precio": 990},
+    {"nombre": "garbanzos", "cantidad": 500, "unidad": "g", "precio": 780},
+    {"nombre": "frijoles negros", "cantidad": 500, "unidad": "g", "precio": 670},
+    {"nombre": "frijoles colorados", "cantidad": 500, "unidad": "g", "precio": 670},
+    {"nombre": "atún", "cantidad": 98, "unidad": "g", "precio": 520},
+    {"nombre": "arroz", "cantidad": 1000, "unidad": "g", "precio": 700},
+    {"nombre": "codito", "marca": "Bodega", "cantidad": 500, "unidad": "g", "precio": 350}
+
+         ] },
+         
+        { "id": 3,
+      "nombre": "Neiceny",
+      "ubicación": "calle 3ra entre 2 y 4 ",
+      "dirección": "138462,-82.403344", 
+
+        "productos":[ 
+            {"nombre": "higado de pollo", "cantidad": 1000, "unidad": "g", "precio": 900},
+            {"nombre": "lomo de cerdo", "cantidad": 453.592, "unidad": "g", "precio": 1100},
+            {"nombre": "pechuga de pollo", "cantidad": 1000, "unidad": "g", "precio": 3000},
+            {"nombre": "molleja de pollo", "cantidad": 1000, "unidad": "g", "precio": 1200},
+            {"nombre": "frijoles negros", "cantidad": 453.592, "unidad": "g", "precio": 400},
+            {"nombre": "arroz", "cantidad": 1000, "unidad": "g", "precio": 700},
+            {"nombre": "leche de vaca", "marca": "Vima", "cantidad": 1030, "unidad": "g", "precio": 1250},
+            {"nombre": "picadillo de pollo", "cantidad": 400, "unidad": "g", "precio": 420},
+             {"nombre": "atún", "cantidad": 98, "unidad": "g", "precio": 520},
+            {"nombre": "frijoles colorados", "cantidad": 453.592, "unidad": "g", "precio":450}
+            ]},
+         
+        { "id": 4,
+      "nombre": "Bodegón Crechería",
+      "ubicación": "calle 21 y Crecharía  Vedado ",
+      "dirección": "23.129507619857254, -82.39888194013932",
+
+      "productos":[ 
+            {"nombre": "pechuga de pollo", "cantidad": 1000, "unidad": "g", "precio": 3000 },
+            {"nombre": "pechuga de pollo", "cantidad": 2000, "unidad": "g", "precio": 5500},
+            {"nombre": "lomo de cerdo", "cantidad": 453.592, "unidad": "g", "precio": 1300 },
+            {"nombre": "pollo entero deshuesado", "cantidad": 2500, "unidad": "g", "precio": 5700},
+            {"nombre": "frijoles negros", "cantidad": 500, "unidad": "g", "precio": 670},
+            {"nombre": "atún", "cantidad": 98, "unidad": "g", "precio": 520},
+            {"nombre": "solmillo de cerdo", "cantidad": 453.592, "unidad": "g", "precio": 1300},
+            {"nombre": "molleja de pollo", "cantidad": 2000, "unidad": "g", "precio": 2400},
+            {"nombre": "codito", "marca": "Bodega", "cantidad": 500, "unidad": "g", "precio": 350},
+            {"nombre": "arroz", "cantidad": 1000, "unidad": "g", "precio": 700}
+           
+
+            ]},
+            
+        { "id": 5,
+      "nombre": "Mercado en plaza",
+      "location": " 23.130993,-82.394916",
+      "addrees": "calle 23 entre Paseo y calle 2 Vedado", 
+
+        "productos":[ 
+            {"nombre": "carne de cerdo", "cantidad": 2000, "unidad": "g", "precio": 7850},
+            {"nombre": "muslo de pollo", "cantidad": 700, "unidad": "g", "precio": 1250},
+            {"nombre": "leche de vaca", "marca": "Vima", "cantidad": 1030, "unidad": "g", "precio": 1300},
+            {"nombre": "huevo", "cantidad": 30, "unidad": "unidad", "precio": 2790},
+            {"nombre": "garbanzos", "cantidad": 500, "unidad": "g", "precio": 780},
+            {"nombre": "frijoles colorados", "cantidad": 500, "unidad": "g", "precio": 760},
+            {"nombre": "frijoles negros", "cantidad": 500, "unidad": "g", "precio": 750},
+            {"nombre": "arroz", "cantidad": 1000, "unidad": "g", "precio": "750"},
+            {"nombre": "picadillo de pollo", "cantidad": 500, "unidad": "g", "precio": 380},
+           {"nombre": "pechuga de pollo", "cantidad": 1000, "unidad": "g", "precio": 3000}
+            
+            ]},
+            
+        { "id": 6,
+      "nombre": "Ale´s",
+      "ubicación": "23.133586,-82.403985",
+      "dirección": "Línea y 12 ", 
+
+        "productos":[ 
+            {"nombre": "muslo de pollo", "cantidad": 1400, "unidad": "g", "precio": 2450},
+            {"nombre": "pechuga de pollo", "cantidad": 2000, "unidad": "g", "precio": 4800},
+            {"nombre": "lomo de cerdo", "cantidad": 453.592, "unidad": "g", "precio": 1200},
+            {"nombre": "solmillo de cerdo", "cantidad": 453.592, "unidad": "g", "precio": 1450},
+            {"nombre": "atún", "cantidad": 98, "unidad": "g", "precio": 600},
+            {"nombre": "leche de vaca", "marca": "COVAP", "cantidad": "1030", "unidad": "g", "precio": 1500},
+            {"nombre": "arroz", "cantidad": 1000, "unidad": "g", "precio": 750},
+            {"nombre": "frijoles colorados",  "cantidad": 453.592, "unidad": "g", "precio": 800},
+            {"nombre": "higado de pollo", "cantidad": 1000, "unidad": "g", "precio": 900},
+            {"nombre": "picadillo de pollo", "marca": "Cocinerito", "cantidad": 509, "unidad": "g", "precio": 420}
+            ]},
+
+
+            { "id": 7,
+      "nombre": "Calle 23 y 4",
+      "ubicación": "23.129865,-82.396036",
+      "dirección": " Calle 23 entre 2 y 4", 
+
+        "productos":[ 
+            {"nombre": "arroz", "cantidad": 453.592, "unidad": "g", "precio": 300},
+            {"nombre": "garbanzos", "cantidad": 453.592, "unidad": "g", "precio": 650},
+            {"nombre": "frijoles negros", "cantidad": 453.592, "unidad": "g", "precio": 400},
+            {"nombre": "pechuga de pollo", "cantidad": 453.592, "unidad": "g", "precio": 1800},
+            {"nombre": "frijoles colorados", "cantidad": 453.592, "unidad": "g", "precio": 650},
+            {"nombre": "muslo de pollo", "cantidad": 3175.15, "unidad": "g", "precio": 4000},
+            {"nombre": "leche de vaca", "cantidad": 1030, "unidad": "g", "precio": 1000},
+            {"nombre": "picadillo de pollo", "cantidad": 400 , "unidad": "g", "precio":450},
+            {"nombre": "codito", "cantidad": 500, "unidad":"g" , "precio": 400 },
+           {"nombre": "atún", "cantidad":98 , "unidad": "g", "precio":550 }
+            ]},
+
+            { "id": 8,
+      "nombre": "kaluch",
+      "ubicación": "23.135477,-82.406909",
+      "dirección": "Calle 12 entre 1era y 3ra ", 
+
+        "productos":[ 
+            {"nombre": "leche de vaca", "marca": "Vima", "cantidad": 1030, "unidad": "g", "precio": 1500},
+            {"nombre": "garbanzos", "cantidad": 500, "unidad": "g", "precio": 950},
+            {"nombre": "atún", "cantidad": 98, "unidad": "g", "precio":600},
+            {"nombre": "pechuga de pollo", "cantidad": 1000, "unidad": "g", "precio": 3300},
+            {"nombre": "lomo de cerdo", "cantidad": 1000, "unidad": "g", "precio": 4400},
+            {"nombre": "arroz", "cantidad": 1000, "unidad": "g", "precio": 900},
+            {"nombre": "huevo", "cantidad": 30, "unidad": "unidad", "precio":3400},
+            {"nombre": "espaguetis", "cantidad": 500, "unidad": "g", "precio": 415},
+            {"nombre": "frijoles colorados", "cantidad": 500, "unidad": "g", "precio": 900},
+            {"nombre": "codito", "cantidad": 500, "unidad": "g", "precio": 415}
+            ]},
+
+            { "id": 9,
+      "nombre": "DK ",
+      "ubicación": "23.14188819722269, -82.38671983185692",
+      "dirección": "Calle k entre 15y 17", 
+
+        "productos":[ 
+            {"nombre": "huevo", "cantidad": 30, "unidad": "unidad", "precio": 3300},
+            {"nombre": "pechuga de pollo", "cantidad": 1000, "unidad": "g", "precio": 3700},
+            {"nombre": "picadillo de pollo", "cantidad": 400, "unidad": "g" , "precio": 490},
+            {"nombre": "molleja de pollo", "cantidad": 1000, "unidad": "g", "precio": 1300},
+            {"nombre": "higado de pollo", "cantidad": 1000, "unidad": "g", "precio": 960},
+            {"nombre": "lomo de cerdo", "cantidad": 453.592, "unidad": "g" , "precio": 1300},
+            {"nombre": "atún", "cantidad": 185, "unidad": "g", "precio": 820},
+            {"nombre": "frijoles negros", "cantidad": 453.592, "unidad": "g", "precio":980},
+            {"nombre": "frijoles colorados", "cantidad": 453.592, "unidad": "g", "precio": 1010},
+            {"nombre": "arroz", "cantidad": 1000, "unidad": "g", "precio": 780},
+            {"nombre": "codito", "cantidad": 500, "unidad": "g", "precio": 350},
+            {"nombre": "leche de vaca", "marca": "Vima", "cantidad": 1030, "unidad": "g", "precio": 1180}
+            ]},
+
+
+              { "id": 10,
+        "nombre": "Mercado",
+        "ubicación": "23.122457,-82.405990",
+        "dirección": "Esquina de 23 y 28",
+         "productos":[ 
+             {"nombre": "picadillo de pollo", "cantidad": 400, "unidad": "g", "precio": 600},
+             {"nombre": "frijoles colorados", "cantidad": 500, "unidad": "g", "precio": 1000},
+             {"nombre": "frijoles negros", "cantidad": 500 , "unidad": "g", "precio": 1000},
+             {"nombre": "arroz", "cantidad": 1000, "unidad": "g", "precio": 740},
+             {"nombre": "codito", "cantidad": 500, "unidad": "g", "precio": 350},
+             {"nombre": "atún", "cantidad": 170, "unidad": "g", "precio": 700},
+             {"nombre": "leche de vaca", "marca": "Vima", "cantidad": 1030, "unidad": "g", "precio": 1300},
+            {"nombre": "pierna de cerdo", "cantidad": 453.592, "unidad": "g", "precio": 980},
+            {"nombre": "garbanzos", "cantidad":453.592, "unidad": "g", "precio": 800},
+             {"nombre": "espaguetis", "cantidad": 500, "unidad": "g", "precio": 350}
+         ]},
+
+         { "id": 11,
+        "nombre": "Mercado Fress",
+        "ubicación": "23.126746422708333, -82.40012990948553",
+        "dirección": "23 y 12",
+         "productos":[ 
+             {"nombre": "higado de pollo", "cantidad":1000 , "unidad": "g", "precio":1000 },
+             {"nombre": "lomo de cerdo", "cantidad":1000 , "unidad": "g", "precio":3500 },
+             {"nombre": "frijoles colorados", "cantidad":1000, "unidad": "g", "precio":1500 },
+             {"nombre": "molleja de pollo", "cantidad": 1000, "unidad": "g", "precio": 1150},
+             {"nombre": "picadillo de pollo", "cantidad": 400, "unidad": "g", "precio": 637},
+             {"nombre": "leche de vaca", "marca": "Pascual", "cantidad":1030 , "unidad": "g", "precio":1150 },
+             {"nombre": "frijoles negros", "cantidad": 1000, "unidad": "g", "precio":1433 },
+            {"nombre": "arroz", "cantidad":820, "unidad": "g", "precio": 820},
+              {"nombre": "codito", "cantidad":250, "unidad": "g", "precio": 500},
+              {"nombre": "muslo de pollo", "cantidad":1050, "unidad": "g", "precio":2000 }
+              
+    
+            ]},
+
+            { "id": 12,
+        "nombre": "Mercado Propersa",
+        "ubicación": "23.13649,-82.386705",
+        "dirección": "Calle H e/23 y 25",
+         "productos":[ 
+             {"nombre": "solmillo de cerdo", "cantidad": 1500  , "unidad": "g", "precio": 9000},
+             {"nombre": "pechuga de pollo", "cantidad": 1000, "unidad": "g", "precio": 3850},
+             {"nombre": "huevo", "cantidad": 30, "unidad": "unidad", "precio": 3100},
+             {"nombre": "codito", "cantidad":453.592, "unidad": "g", "precio": 380},
+             {"nombre": "frijoles negros", "cantidad": 1000, "unidad": "g", "precio": 1600},
+             {"nombre": "arroz", "cantidad": 1000, "unidad": "g", "precio": 970},
+            {"nombre": "atún", "cantidad":98 , "unidad": "g", "precio":600 },
+          {"nombre": "frijoles colorados", "cantidad": 453.592 ,"unidad": "g", "precio":430},
+              {"nombre": "higado de pollo", "cantidad": 1000, "unidad": "g", "precio":800},
+              {"nombre": "espaguetis", "cantidad":500, "unidad": "g", "precio": 300}
+           ]},
+
+            { "id": 13,
+        "nombre": "Complejo",
+        "ubicación": "23.129876,-82.401950",
+        "dirección": "calle 12 e/10 y 12",
+         "productos":[ 
+             {"nombre": "leche de vaca", "cantidad": 1030, "unidad": "g", "precio": 1470},
+             {"nombre": "pechuga de pollo", "cantidad": 1000, "unidad": "g", "precio": 2750},
+             {"nombre": "picadillo de pollo", "cantidad": 1000, "unidad": "g", "precio": 750},
+             {"nombre": "lomo de cerdo", "cantidad": 453.592, "unidad": "g", "precio": 1200},
+             {"nombre": "huevo", "cantidad": 30, "unidad": "unidad", "precio": 3300},
+             {"nombre": "frijoles negros", "cantidad": 453.592, "unidad": "g", "precio": 530},
+             {"nombre": "espaguetis", "cantidad": 520, "unidad": "g", "precio": 415},
+            {"nombre": "arroz", "cantidad": 1000, "unidad": "g", "precio": 800},
+              {"nombre": "frijoles colorados", "cantidad": 453.592, "unidad": "g", "precio": 600},
+              {"nombre": "codito", "cantidad": 453.592, "unidad": "g", "precio": 360}
+           ]},
+
+            { "id": 14,
+        "nombre": "AsereMarekt",
+        "ubicación": "23.131487,-82.400727",
+        "dirección": "Calle 8 entre 15 y 17",
+         "productos":[ 
+             {"nombre": "pechuga de pollo", "cantidad":2000 , "unidad": "g", "precio": 5060},
+             {"nombre": "frijoles negros", "cantidad": 500, "unidad": "g", "precio": 810},
+             {"nombre": "frijoles colorados",  "cantidad": 1000, "unidad": "g", "precio": 1670},
+             {"nombre": "codito", "cantidad": 500, "unidad": "g", "precio": 355},
+             {"nombre": "espaguetis", "cantidad": 500, "unidad": "g", "precio": 355},
+             {"nombre": "pierna de cerdo", "cantidad": 453.592, "unidad": "g", "precio": 989},
+             {"nombre": "garbanzos", "cantidad": 1000, "unidad": "g", "precio": 1470},
+            {"nombre": "arroz", "cantidad": 1000, "unidad": "g", "precio": 750},
+            {"nombre": "higado de pollo", "cantidad": 1000, "unidad": "g", "precio":900 },
+            {"nombre": "atún", "cantidad": 98, "unidad": "g", "precio": 550}
+           ]},
+
+           { "id": 15,
+        "nombre": "Bodeguita El Churro",
+        "ubicación": "23.12971284578667, -82.39766581073975",
+        "dirección": "Calle 6 e/21 y 23",
+         "productos":[ 
+             {"nombre": "molleja de pollo", "cantidad": 1000, "unidad": "g", "precio":1150},
+             {"nombre": "lomo de cerdo", "cantidad": 453.592, "unidad":"g" , "precio": 1200 },
+             {"nombre": "pechuga de pollo", "cantidad":2000 , "unidad": "g", "precio":4400},
+             {"nombre": "picadillo de pollo", "cantidad":400 , "unidad": "g", "precio":440},
+             {"nombre": "muslo de pollo", "cantidad":317.51 , "unidad": "g", "precio":380},
+             {"nombre": "huevo", "cantidad": 30 , "unidad": "unidad", "precio":3000 },
+             {"nombre": "frijoles negros", "cantidad": 1000, "unidad": "g", "precio":900 },
+            {"nombre": "frijoles colorados", "cantidad": 453.592,"unidad": "g", "precio":810},
+            {"nombre": "leche de vaca", "cantidad":1030 , "unidad": "g", "precio":900},
+             {"nombre": "espaguetis", "cantidad": 500, "unidad": "g", "precio":280 }
+            ]},
+
+
+           { "id": 16,
+        "nombre": "Mercatoria",
+        "ubicación": "23.130636,-82.396775",
+        "dirección": "Calle 4 entre 23 y 21",
+         "productos":[ 
+             {"nombre": "arroz", "cantidad": 1000 , "unidad": "g", "precio": 600},
+             {"nombre": "espaguetis", "cantidad": 500 , "unidad": "g", "precio": 330},
+             {"nombre": "pechuga de pollo", "cantidad": 1000, "unidad": "g", "precio":1400},
+             {"nombre": "espaguetis", "cantidad": 500, "unidad": "g", "precio": 350 },
+             {"nombre": "atún", "cantidad": 98 , "unidad": "g", "precio":500 },
+             {"nombre": "frijoles negros", "cantidad": 1000  , "unidad": "g", "precio": 900},
+            {"nombre": "frijoles colorados", "cantidad": 1000,"unidad": "g", "precio":1000 },
+            {"nombre": "higado de pollo", "cantidad": 1000, "unidad": "g", "precio":850 },
+             {"nombre": "garbanzos", "cantidad": 1000, "unidad": "g", "precio":1000 },
+             {"nombre": "leche de vaca", "marca": "Vima", "cantidad": 1030, "unidad": "g", "precio": 1200}
+            ]},
+
+            { "id": 17,
+        "nombre": "Bodegón, 17",
+        "ubicación": "23.137574910522808, -82.39182764249324",
+        "dirección": "Calle 17 e/ E y F",
+         "productos":[ 
+             {"nombre": "arroz", "cantidad": 1000 , "unidad": "g", "precio": 600},
+             {"nombre": "espaguetis", "cantidad": 500 , "unidad": "g", "precio": 330},
+             {"nombre": "pechuga de pollo", "cantidad": 1000, "unidad": "g", "precio":1400},
+             {"nombre": "espaguetis", "cantidad": 500, "unidad": "g", "precio": 350 },
+             {"nombre": "atún", "cantidad": 98 , "unidad": "g", "precio":500 },
+             {"nombre": "frijoles negros", "cantidad": 1000  , "unidad": "g", "precio": 900},
+            {"nombre": "frijoles colorados", "cantidad": 1000,"unidad": "g", "precio":1000 },
+            {"nombre": "higado de pollo", "cantidad": 1000, "unidad": "g", "precio":850 },
+             {"nombre": "garbanzos", "cantidad": 1000, "unidad": "g", "precio":1000 },
+             {"nombre": "leche de vaca", "marca": "Vima", "cantidad": 1030, "unidad": "g", "precio": 1200}
+
+            ]},
+
+        { "id": 18,
+        "nombre": "El Rey",
+        "ubicación": "23.143929,-82.396097",
+        "dirección": "Calle F e/ 3ra y 5ta",
+         "productos":[ 
+             {"nombre": "espaguetis", "cantidad": 500, "unidad": "g", "precio": 410},
+             {"nombre": "codito", "cantidad": 500, "unidad":"g" , "precio": 400 },
+             {"nombre": "pechuga de pollo", "cantidad": 1000, "unidad": "g", "precio": 2800},
+             {"nombre": "higado de pollo", "cantidad": 1000, "unidad": "g", "precio": 950 },
+             {"nombre": "arroz", "cantidad": 1000, "unidad": "g", "precio": 850 },
+             {"nombre": "atún", "cantidad": 98 , "unidad": "g", "precio":500 },
+              {"nombre": "frijoles colorados", "cantidad": 500, "unidad": "g", "precio": 1000},
+            {"nombre": "frijoles negros", "cantidad": 500 ,"unidad": "g", "precio": 900},
+           {"nombre": "muslo de pollo", "cantidad": 1727.57, "unidad": "g", "precio": 3000},
+             {"nombre": "garbanzos", "cantidad": 1000, "unidad": "g", "precio": 700}
+            ]},
+          
+            { "id": 19,
+        "nombre": "Oasis",
+        "ubicación": "23.142844007388806, -82.38935753397465",
+        "dirección": "Calle J e/Linea y 11",
+         "productos":[ 
+             {"nombre": "picadillo de pollo", "cantidad": 400 , "unidad": "g", "precio":750},
+             {"nombre": "leche de vaca", "cantidad":1030 , "unidad":"g" , "precio": 1030},
+             {"nombre": "pechuga de pollo", "cantidad": 2000, "unidad": "g", "precio": 5300},
+             {"nombre": "codito", "cantidad": 500, "unidad": "g", "precio": 380},
+             {"nombre": "espaguetis", "cantidad": 500, "unidad": "g", "precio":380 },
+             {"nombre": "atún", "cantidad":98 , "unidad": "g", "precio":500 },
+             {"nombre": "frijoles negros", "cantidad": 453.592, "unidad": "g", "precio": 400},
+            {"nombre": "frijoles colorados", "cantidad": 453.592 ,"unidad": "g", "precio":430},
+             {"nombre": "arroz", "cantidad": 453.592, "unidad": "g", "precio": 350},
+             {"nombre": "garbanzos", "cantidad": 453.592, "unidad": "g", "precio": 370}
+            ]},
+
+             { "id": 20,
+        "nombre": "Bodegón Los Mansos",
+        "ubicación": "23.137115,-82.385745",
+        "dirección": "Calle I entre 23 y 25",
+         "productos":[ 
+             {"nombre": "picadillo de pollo", "cantidad": 400, "unidad": "g", "precio":500},
+             {"nombre": "arroz", "cantidad":1000, "unidad":"g" , "precio":790},
+             {"nombre": "pechuga de pollo", "cantidad":2000, "unidad": "g", "precio":5000},
+             {"nombre": "codito", "cantidad":500, "unidad": "g", "precio":350},
+             {"nombre": "molleja de pollo", "cantidad": 1000, "unidad": "g", "precio":1200},
+             {"nombre": "atún", "cantidad":98 , "unidad": "g", "precio":600 },
+             {"nombre": "frijoles negros", "cantidad": 2000 , "unidad": "g", "precio":1990},
+            {"nombre": "frijoles colorados", "cantidad":453.592 ,"unidad": "g", "precio":780},
+            {"nombre": "higado de pollo", "cantidad": 1000, "unidad": "g", "precio":990},
+             {"nombre": "leche de vaca", "cantidad": 1030, "unidad": "g", "precio":1200}
+            ]},
+          
+             { "id": 21,
+        "nombre": "Dalis Supermarket",
+        "ubicación": "23.136078,-82.394035" ,
+        "dirección": "Calle 17 esquina C",
+         "productos":[ 
+             {"nombre": "picadillo de pollo", "cantidad": 400 , "unidad": "g", "precio": 500},
+             {"nombre": "atun", "cantidad":110 , "unidad":"g" , "precio":840},
+             {"nombre": "pechuga de pollo", "cantidad": 1000, "unidad": "g", "precio":1200},
+             {"nombre": "arroz", "cantidad":1000, "unidad": "g", "precio":800},
+             {"nombre": "espaguetis", "cantidad": 500, "unidad": "g", "precio":390},
+             {"nombre": "codito", "cantidad":500 , "unidad": "g", "precio":395},
+             {"nombre": "frijoles negros", "cantidad":1000, "unidad": "g", "precio": 1100},
+            {"nombre": "leche de vaca", "cantidad":1030 ,"unidad": "g", "precio":1300},
+            {"nombre": "higado de pollo", "cantidad":1000, "unidad": "g", "precio":970},
+             {"nombre": "muslo de pollo", "cantidad":317.51, "unidad": "g", "precio":450}
+            ]},
+          
+             { "id": 22,
+             "ubicación": "23.141883861552458, -82.39455567844196",
+        "nombre": "Bodegón Turing",
+        "dirección": "Calle F e/ calzada y 9",
+         "productos":[ 
+             {"nombre": "picadillo de pollo", "cantidad": 400 , "unidad": "g", "precio":440},
+             {"nombre": "molleja de pollo", "cantidad":1000 , "unidad":"g" , "precio":1100 },
+             {"nombre": "pechuga de pollo", "cantidad":2000, "unidad": "g", "precio":4600},
+             {"nombre": "solmillo de cerdo", "cantidad":453.592 , "unidad": "g", "precio":1300},
+             {"nombre": "higado de pollo", "cantidad": 1000, "unidad": "g", "precio":840 },
+             {"nombre": "atún", "cantidad":98, "unidad": "g", "precio":550 },
+             {"nombre": "frijoles negros", "cantidad":1000 , "unidad": "g", "precio": 780},
+            {"nombre": "codito", "cantidad": 500 ,"unidad": "g", "precio":350 },
+             {"nombre": "garbanzos", "cantidad":453.592, "unidad": "g", "precio":750 },
+             {"nombre": "pierna de cerdo", "cantidad":453.592, "unidad": "g", "precio":850}
+
+            ]},
+
+            { "id": 23,
+         "nombre": "Enplaza Vieja",    
+        "ubicación": "23.139306826822352, -82.35409832158794",
+        "dirección": "calle Habana e/ O´Reilly y San Juan Dios",
+         "productos":[ 
+             {"nombre": "frijoles colorados", "cantidad": 500, "unidad": "g", "precio":720 },
+             {"nombre": "lomo de cerdo", "cantidad": 2000, "unidad":"g" , "precio":4455 },
+             {"nombre": "pechuga de pollo", "cantidad":45359.2, "unidad": "g", "precio":11900 },
+             {"nombre": "huevo", "cantidad":30 , "unidad": "unidad", "precio":3000 },
+             {"nombre": "higado de pollo", "cantidad": 1000, "unidad": "g", "precio":1400 },
+             {"nombre": "atún", "cantidad":110, "unidad": "g", "precio":600 },
+             {"nombre": "frijoles negros", "cantidad":500 , "unidad": "g", "precio":650 },
+            {"nombre": "codito", "cantidad": 500,"unidad": "g", "precio": 415},
+             {"nombre": "garbanzos", "cantidad":500, "unidad": "g", "precio":690 },
+             {"nombre": "espaguetis", "cantidad":500, "unidad": "g", "precio":415 }
+            ]},
+
+            { "id": 24,
+             "ubicación": "23.137922146071592, -82.35690665963108",
+        "nombre": "O`Reilly",
+        "dirección": "Calle O`Reillye/Berraza e Villegas",
+         "productos":[ 
+             {"nombre": "picadillo de pollo", "cantidad": 400, "unidad": "g", "precio":550 },
+             {"nombre": "molleja de pollo", "cantidad": 1000, "unidad":"g" , "precio": 1400 },
+             {"nombre": "pechuga de pollo", "cantidad":2000, "unidad": "g", "precio":5500 },
+             {"nombre": "arroz", "cantidad":1000 , "unidad": "g", "precio": 900},
+             {"nombre": "higado de pollo", "cantidad": 1000, "unidad": "g", "precio":950 },
+             {"nombre": "atún", "cantidad": 98,"unidad": "g", "precio":580 },
+             {"nombre": "frijoles negros", "cantidad":500 , "unidad": "g", "precio":700},
+            {"nombre": "codito", "cantidad":500 ,"unidad": "g", "precio":350 },
+             {"nombre": "frijoles colorados", "cantidad":453.592, "unidad": "g", "precio":860 }
+            ]},
+
+            { "id": 25,
+             "ubicación": "23.138618175941854, -82.36028966318588",
+        "nombre": "L&L",
+        "dirección": "calle consulado entre Virtudes y Neptuno",
+         "productos":[ 
+             {"nombre": "picadillo de pollo", "cantidad":400, "unidad": "g", "precio":450 },
+             {"nombre": "espaguetis", "cantidad":500 , "unidad":"g" , "precio": 350},
+             {"nombre": "pechuga de pollo", "cantidad":2000, "unidad": "g", "precio":5000 },
+             {"nombre": "arroz", "cantidad":1000 , "unidad": "g", "precio":750 },
+             {"nombre": "higado de pollo", "cantidad": 1000, "unidad": "g", "precio":1200 },
+             {"nombre": "atún", "cantidad": 110,"unidad": "g", "precio":650 },
+             {"nombre": "frijoles negros", "cantidad":500 , "unidad": "g", "precio":800},
+            {"nombre": "codito", "cantidad":500 ,"unidad": "g", "precio": 350},
+             {"nombre": "solmillo de cerdo", "cantidad":453.592, "unidad": "g", "precio":1400 },
+              {"nombre": "garbanzos", "cantidad":1000, "unidad": "g", "precio":1800 }
+             
+            ]}
+
+             
+
+
+
+          
+                         
+            
+   ] }
+   
+               
+           
+           
+
+            
+            
+            
+            
+        
+      
+            
+           
+           
+    
+
+
+
+
+
+
+           
+           
+           
+  
+    
+    
+
+
+
+ 
+
+
+
+
