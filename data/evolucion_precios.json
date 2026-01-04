@@ -737,31 +737,6 @@
       "max": 450.0
     }
    
-  },
-  "2025-12": {
-    "arroz": {
-      "unit": "lb",
-      "promedio":346
-    },
-    "huevo": {
-      "unit": "unidad",
-      "promedio":104
-    },
-    "lomo de cerdo": {
-      "unit": "lb",
-      "promedio": 1273
-    },
-    "pierna de cerdo": {
-      "unit": "lb",
-      "promedio": 1005
-    },
-    "frijoles negros": {
-      "unit": "lb",
-      "promedio": 574
-    },
-    "frijoles colorados": {
-      "unit": "lb",
-      "promedio": 687
-    }
+  
   }
 }
