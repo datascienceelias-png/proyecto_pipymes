@@ -21,7 +21,7 @@
     ]},
 
         { "id": 2,
-        "nombre": "AgroAdrian",
+        "nombre": "Agro Adrian",
         "location": "23.127007,-82.397911",
         "address": "Calle 10 entre 25 y 26",  
          
@@ -246,7 +246,7 @@
            ]},
 
             { "id": 14,
-        "nombre": "AsereMarekt",
+        "nombre": "Asere Marekt",
         "ubicación": "23.131487,-82.400727",
         "dirección": "Calle 8 entre 15 y 17",
          "productos":[ 
@@ -454,14 +454,14 @@
               { "id": 26,
              "ubicación": "23.170464, -82.134149",
         "nombre": "El Ancla de oro",
-        "dirección": "Guanabo",
+        "dirección": "5ta Avenida e/488 A y 490A, Guanabo",
          "productos":[ 
              {"nombre": "picadillo de pollo", "cantidad":400, "unidad": "g", "precio":450 },
              {"nombre": "espaguetis", "cantidad":500 , "unidad":"g" , "precio": 410},
              {"nombre": "lomo de cerdo", "cantidad":453.592, "unidad": "g", "precio":1100},
              {"nombre": "arroz", "cantidad":1000 , "unidad": "g", "precio":750 },
              {"nombre": "higado de pollo", "cantidad": 1000, "unidad": "g", "precio":1000 },
-             {"nombre": "picadillo de pollo", "cantidad":453.592,"unidad": "g", "precio":330 },
+             {"nombre": "pechuga de pollo", "cantidad":453.592,"unidad": "g", "precio":330 },
              {"nombre": "frijoles negros", "cantidad":500 , "unidad": "g", "precio":300},
             {"nombre": "codito", "cantidad":500 ,"unidad": "g", "precio": 400},
              {"nombre": "molleja de pollo", "cantidad":2000, "unidad": "g", "precio":2500 },
@@ -481,10 +481,62 @@
              {"nombre": "leche de vaca", "cantidad":1030,"unidad": "g", "precio":1400 },
              {"nombre": "molleja de pollo", "cantidad":500 , "unidad": "g", "precio":300},
             {"nombre": "codito", "cantidad":500 ,"unidad": "g", "precio": 350},
-             {"nombre": "molleja", "cantidad":1000, "unidad": "g", "precio":1100 },
+             {"nombre": "molleja de pollo", "cantidad":1000, "unidad": "g", "precio":1100 },
               {"nombre": "muslo de pollo", "cantidad":317.51, "unidad": "g", "precio":400 },
-              {"nombre": "huevo", "cantidad": 30, "unidad": "g", "precio":3000 }
+              {"nombre": "huevo", "cantidad": 30, "unidad": "unidad", "precio":3000 }
+             ]},
+
+             { "id": 28,
+             "ubicación": "23.1315770160482, -82.36971243104904",
+        "nombre": "La Carta, el sabor familiar",
+        "dirección": "Centro Habana",
+         "productos":[ 
+             {"nombre": "picadillo de pollo", "cantidad":500, "unidad": "g", "precio":370 },
+             {"nombre": "espaguetis", "cantidad":500, "unidad": "g", "precio":360},
+             {"nombre": "arroz", "cantidad":1000, "unidad": "g", "precio":650 },
+             {"nombre": "garbanzos", "cantidad":500, "unidad": "g", "precio":550 },
+             {"nombre": "leche de vaca", "cantidad":1030,"unidad": "g", "precio":900 },
+             {"nombre": "frijoles negros", "cantidad":500 , "unidad": "g", "precio":850},
+            {"nombre": "codito", "cantidad":250 ,"unidad": "g", "precio": 250},
+             {"nombre": "molleja de pollo", "cantidad":1000, "unidad": "g", "precio":1000 },
+              {"nombre": "higado de pollo", "cantidad":1000, "unidad": "g", "precio":850 },
+              {"nombre": "pechuga de pollo", "cantidad": 2000, "unidad": "g", "precio":4750 }
+             ]},
+
+             { "id": 29,
+             "ubicación": "23.131240,-82.398317",
+        "nombre": "Elten",
+        "dirección": "19 y 6 Vedado",
+         "productos":[ 
+             {"nombre": "picadillo de pollo", "cantidad":453.592, "unidad": "g", "precio":300 },
+             {"nombre": "espaguetis", "cantidad":500, "unidad": "g", "precio":340},
+             {"nombre": "arroz", "cantidad":1000, "unidad": "g", "precio":680 },
+             {"nombre": "garbanzos", "cantidad":1000, "unidad": "g", "precio":1250 },
+             {"nombre": "frijoles colorados", "cantidad":1030,"unidad": "g", "precio":900 },
+             {"nombre": "frijoles negros", "cantidad":1000 , "unidad": "g", "precio":1680},
+            {"nombre": "codito", "cantidad":500 ,"unidad": "g", "precio": 360},
+             {"nombre": "molleja de pollo", "cantidad":1000, "unidad": "g", "precio":1100 },
+              {"nombre": "higado de pollo", "cantidad":1000, "unidad": "g", "precio":900 },
+              {"nombre": "pechuga de pollo", "cantidad": 2000, "unidad": "g", "precio":5500}
+             ]},
+
+             { "id": 30,
+             "ubicación": "23.125452540628068, -82.38154620513863",
+        "nombre": "La Estacion",
+        "dirección": "Vedado",
+         "productos":[ 
+             {"nombre": "picadillo de pollo", "cantidad":500, "unidad": "g", "precio":370 },
+             {"nombre": "espaguetis", "cantidad":500, "unidad": "g", "precio":370},
+             {"nombre": "arroz", "cantidad":1000, "unidad": "g", "precio":650 },
+             {"nombre": "garbanzos", "cantidad":500, "unidad": "g", "precio":550 },
+             {"nombre": "leche de vaca", "cantidad":1030,"unidad": "g", "precio":1200 },
+             {"nombre": "frijoles negros", "cantidad":500 , "unidad": "g", "precio":850},
+            {"nombre": "codito", "cantidad":500 ,"unidad": "g", "precio": 370},
+             {"nombre": "lomo de cerdo", "cantidad":1000, "unidad": "g", "precio":1250 },
+              {"nombre": "huevo", "cantidad":30, "unidad": "unidad", "precio":3000},
+              {"nombre": "pechuga de pollo", "cantidad": 2000, "unidad": "g", "precio":5100 }
              ]}
+
              
 
 

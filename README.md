@@ -1,5 +1,5 @@
 # EL desafio del cubano: "Mantener una alimentacion saludable":
-Se analizaron 17 productos en 30 Mypimes en 3 municipios de La Habana
+Se analizaron 17 productos en 30 Mypimes en Plaza de la Recolucion, Centro Habana y Guanabo
 
 En la base de datos del valor nutricional, se tomaron los datos a partir de las etiquetas de los productos y también por la aplicación [Fitia](https://fitia.app/es/). Estos valores presentan los macronutrientes de 100 gramos de cada producto en crudo, excepto el huevo que se obtuvo a partir de la unidad y la leche se covirtió de [litro a gramos](https://share.google/oaWMIUlMNlFlo1M0C). Además de que la leche en todas las mipymes se encuentran en un envase de caja de 1 litro.
 En el caso del atún, el producto es en lata y solo se consideró el peso escurrido de igaul forma de paquete de pollo ya que contiene hueso
