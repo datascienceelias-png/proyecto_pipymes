@@ -146,10 +146,12 @@ def datos_evolución_precios(precios, producto):
             datos_producto = precios[mes][producto]
             promedio = round((datos_producto["min"] + datos_producto["max"]) / 2) # Calcular el promedio
             promedio_precio.append(promedio)
+            
 
-        elif precios[mes] =="2025-12":
-            datos_producto = precios[mes][producto]
-            promedio_precio.append(datos_producto["promedio"])
+            if precios[mes] =="2025-12":
+                datos_producto = precios[mes][producto]
+                promedio_precio.append(datos_producto["promedio"])
+            
 
         #los datos del precio del huevo son por unidad, por eso se multiplica por 30 para obtener el precio del cartón
         if producto == "huevo" and producto in precios[mes]: #acceder al producto en ese mes
