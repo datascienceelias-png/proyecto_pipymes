@@ -87,7 +87,7 @@ def precio_promedio_lb(listado_de_productos, mipyme):
 
     En caso de las latas de atún como su peso es menor a de una libra, el analisis seria para saber el precio promedio para comprar una lata de atun
 
-    El análisis de La leche de vaca es para conocer 
+
     """
 
     output = {}
@@ -126,26 +126,42 @@ def precio_promedio_lb(listado_de_productos, mipyme):
     return output
 
 def datos_evolución_precios(precios, producto):
+    """
+    Calcula el precio promedio mensual de un producto específico a lo largo del tiempo.
+
+    El argumento "precios" es un diccionario donde las claves son meses y los valores son el precio de los productos.
+
+    El argumento "producto" es el nombre del producto para el cual se desea ver la evolución de precios.
+
+    Retorna dos listas: una con las fechas y otra con los precios promedios correspondientes.
+    """
 
     fechas = []
     promedio_precio = []
     for mes in precios.keys(): #Iterar por cada mes 
-        fechas.append(mes)
+        fechas.append(mes) # las llaves son las fechas
 
+        
+        if producto in precios[mes]:
+            datos_producto = precios[mes][producto]
+            promedio = round((datos_producto["min"] + datos_producto["max"]) / 2) # Calcular el promedio
+            promedio_precio.append(promedio)
 
+        elif precios[mes] =="2025-12":
+            datos_producto = precios[mes][producto]
+            promedio_precio.append(datos_producto["promedio"])
+
+        #los datos del precio del huevo son por unidad, por eso se multiplica por 30 para obtener el precio del cartón
         if producto == "huevo" and producto in precios[mes]: #acceder al producto en ese mes
             datos_producto = precios[mes][producto]
             promedio = (round((datos_producto["min"] + datos_producto["max"]) / 2)) * 30
             promedio_precio.append(promedio)
-            continue
-        elif producto in precios[mes]:
-            datos_producto = precios[mes][producto]
-            promedio = round((datos_producto["min"] + datos_producto["max"]) / 2) # Calcular el promedio
-            promedio_precio.append(promedio)
-        
-        
+            
+
+    
 
     return fechas, promedio_precio
+
 
 
 

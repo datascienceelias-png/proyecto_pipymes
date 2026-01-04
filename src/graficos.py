@@ -59,7 +59,7 @@ def barra_apilada(producto, carbohidratos, proteínas, grasa):
 
     plt.show()
 
-def evolución_huevo(precio, fecha):
+def evolución_precios(precio, fecha):
     x = fecha
     y = precio
 

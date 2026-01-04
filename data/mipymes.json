@@ -450,8 +450,41 @@
              {"nombre": "solmillo de cerdo", "cantidad":453.592, "unidad": "g", "precio":1400 },
               {"nombre": "garbanzos", "cantidad":1000, "unidad": "g", "precio":1800 }
              
-            ]}
-
+            ]},
+              { "id": 26,
+             "ubicación": "23.170464, -82.134149",
+        "nombre": "El Ancla de oro",
+        "dirección": "Guanabo",
+         "productos":[ 
+             {"nombre": "picadillo de pollo", "cantidad":400, "unidad": "g", "precio":450 },
+             {"nombre": "espaguetis", "cantidad":500 , "unidad":"g" , "precio": 410},
+             {"nombre": "lomo de cerdo", "cantidad":453.592, "unidad": "g", "precio":1100},
+             {"nombre": "arroz", "cantidad":1000 , "unidad": "g", "precio":750 },
+             {"nombre": "higado de pollo", "cantidad": 1000, "unidad": "g", "precio":1000 },
+             {"nombre": "picadillo de pollo", "cantidad":453.592,"unidad": "g", "precio":330 },
+             {"nombre": "frijoles negros", "cantidad":500 , "unidad": "g", "precio":300},
+            {"nombre": "codito", "cantidad":500 ,"unidad": "g", "precio": 400},
+             {"nombre": "molleja de pollo", "cantidad":2000, "unidad": "g", "precio":2500 },
+              {"nombre": "huevo", "cantidad":30, "unidad": "g", "precio":3300 }
+             
+            ]},
+            
+              { "id": 27,
+             "ubicación": "23.169156, 82.146385",
+        "nombre": "El Barco",
+        "dirección": "Guanabo",
+         "productos":[ 
+             {"nombre": "picadillo de pollo", "cantidad":500, "unidad": "g", "precio":500 },
+             {"nombre": "lomo de cerdo", "cantidad":453.592, "unidad": "g", "precio":1250},
+             {"nombre": "arroz", "cantidad":453.592 , "unidad": "g", "precio":280 },
+             {"nombre": "pechuga de pollo", "cantidad":2000, "unidad": "g", "precio":4900 },
+             {"nombre": "leche de vaca", "cantidad":1030,"unidad": "g", "precio":1400 },
+             {"nombre": "molleja de pollo", "cantidad":500 , "unidad": "g", "precio":300},
+            {"nombre": "codito", "cantidad":500 ,"unidad": "g", "precio": 350},
+             {"nombre": "molleja", "cantidad":1000, "unidad": "g", "precio":1100 },
+              {"nombre": "muslo de pollo", "cantidad":317.51, "unidad": "g", "precio":400 },
+              {"nombre": "huevo", "cantidad": 30, "unidad": "g", "precio":3000 }
+             ]}
              
 
 
