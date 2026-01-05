@@ -71,7 +71,7 @@ def evolución_precios(precio, fecha):
     plt.tight_layout()
     plt.title("Evolución del precio", fontsize=16)
     plt.xlabel("Fechas", fontsize=12)
-    plt.ylabel("Precios", fontsize=12)
+    plt.ylabel("Precios", fontsize=13)
     plt.grid(True, alpha=0.3) #Activar las cuadrículas para mejor visualización
     
     plt.show()

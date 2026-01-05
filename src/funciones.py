@@ -24,11 +24,15 @@ def promedio(lista):
 def costo_promedio_nutr(data_mipyme, productos, valor_nutricional):
     """
     Calcula el costo promedio de 1 g de proteína para cada producto,
+
+    EL argumento "producto" es una lista con los productos para analizar y el "valor nutricional" es el macronutriente que se desea analizar el precio
+
+
     """
     output = {}
 
-    for i, nombre_nutri in enumerate(productos):
-        lista_costos = [] #Esta lista es para calcular el costo promedio, se reinicia los valores en cada iteracion
+    for i, nombre_nutri in enumerate(productos): # El código enumerate lo uso para acceder tanto como al producto como su posición para luego acceder al precio del producto
+        lista_costos = [] #Esta lista es para calcular el costo promedio, se reinicia los valores en cada iteración
 
         for mipyme in data_mipyme["mipyme"]:
             for producto in mipyme["productos"]:
@@ -36,7 +40,7 @@ def costo_promedio_nutr(data_mipyme, productos, valor_nutricional):
                 if producto["nombre"] == "huevo": # EL costo del huevo no es por 100 gramos sino por unidad 
                     precio = float(producto["precio"])
                     gramos = float(producto["cantidad"])
-                    macro_total = valor_nutricional[i] * gramos
+                    macro_total = valor_nutricional[i] * gramos #EL inidice i es para buscar en el diccionario del valor nutricional el producto correspondiente
 
                     if macro_total > 0: # Evitar división por cero cuando no hay carbohidratos en algunos alimentos
                         costo_por_gramo = precio / macro_total
@@ -155,11 +159,6 @@ def datos_evolución_precios(precios, producto):
             
 
 
-            
-
-       
-
-    
 
     return fechas, promedio_precio
 
