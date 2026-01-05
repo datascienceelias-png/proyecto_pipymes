@@ -76,9 +76,9 @@ def calcular_macronutrientes(kcal):
     proteinas = (0.10 * kcal) / 4
 
     return {
-        "carbohidratos_g": round(carbohidratos, 2),
-        "grasas_g": round(grasas, 2),
-        "proteinas_g": round(proteinas, 2)
+        "carbohidratos": round(carbohidratos, 2),
+        "grasas": round(grasas, 2),
+        "proteinas": round(proteinas, 2)
     }
 
 

@@ -17,20 +17,22 @@ En la sección **requisitos para una dieta saludable**  adapté las proporciones
 
 
 ### Funciones
-La función **precio_promedio_lb** tiene como objetivo calcular el precio promedio que una persona debe gastar en comprar 1 libra de cada producto. Pero el peso escurrido de las diferentes latas de atún de todas las mipymes nunca llega a 1 libra, por eso el análisis se basa en el precio promedio para comprar 1 lata. 
+ºLa función **precio_promedio_lb** tiene como objetivo calcular el precio promedio que una persona debe gastar en comprar 1 libra de cada producto. Pero el peso escurrido de las diferentes latas de atún de todas las mipymes nunca llega a 1 libra, por eso el análisis se basa en el precio promedio para comprar 1 lata. 
 En el caso de la leche, todos los envases son en una caja que contiene 1 litro de leche aproximadamente de 1030g que son aproximadamente 2,27 libras (1034/453.592). Por tanto el resultado de la funcion de la leche es el promedio de costo de un envace de 1 litro de leche. 
 El resultado del de huevo es el promedio del valor de una unidad.
 
-La función **costo_promedio_nutr** fue creada para conocer el precio de obtener 1 gramo del macronutriente que el usuario desea analizar. Además revela cuales los alimentos más económicos con mayor cantidad del macronutriente. La funcón se basa en las siguiente formula:
+ºLa función **costo_promedio_nutr** fue creada para conocer el precio de obtener 1 gramo del macronutriente que el usuario desea analizar. Además revela cuales los alimentos más económicos con mayor cantidad del macronutriente. La funcón se basa en las siguiente formula:
 
 **cantidad total de macronutriente = (valor nutricional del producto /100) * Cantidad total en gramos del producto**
 
--La divición entre el valor nutricional y 100 es para conocer la proporción del macronutriente. Significa que cada gramo del producto tiene X gramos del macronutriente seleccionado. Al multiplicarlo por la cantidad total en gramos del producto devuelve el total en gramos del macronutriente
+Explicación: La divición entre el valor nutricional y 100 es para conocer la proporción del macronutriente. Significa que cada gramo del producto tiene X gramos del macronutriente seleccionado. Al multiplicarlo por la cantidad total en gramos del producto devuelve el total en gramos del macronutriente
 
 **costo por gramo = precio / cantidad total de macronutriente**
 
--Se divide el precio del producto entre la cantidad total de macronutriente que contiene y devuelve el costo para obtener 1 gramo de ese macronutriente. Un ejemplo práctico para entenderlo es el siguiente ejemplo: si compras una caja de lapices en 100cup y la caja contiene 10 lapices entonces cada lápiz te cuestó 10cup
+Explicación: Se divide el precio del producto entre la cantidad total de macronutriente que contiene, y devuelve el costo para obtener 1 gramo de ese macronutriente. Un ejemplo práctico para entenderlo es el siguiente: si compras una caja de lapices en 100cup y la caja contiene 10 lapices entonces cada lápiz te cuestó 10cup
 
+
+ºLa función **calcular_macronutrientes** calcula la cantidad de cada macronutriente que una persona debe consumir al dia dependiendo de la cantidad de kilocalorias que debe consumir. Para ello se utilizaron los datos a partir de un articulo publicado por la [Dirección General de Salud Pública de Madrid, España](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.comunidad.madrid/sites/default/files/doc/sanidad/1._valor_energetico_saber_mas.pdf&ved=2ahUKEwj3kZS22PORAxWuSTABHQuFO2oQFnoECBwQAw&usg=AOvVaw0c4toutOgq-dTvHpn6qLhp) donde 1 gramo de proteina y carbohidrato aporta 4 kcal y 1 gramo de grasas 9 kcal
 
 
 ### Gráficos
