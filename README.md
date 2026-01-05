@@ -1,7 +1,7 @@
-# EL desafio del cubano: "Mantener una alimentacion saludable":
+# EL desafio del cubano: "Mantener una alimentación saludable":
 
 ## Base de Datos
-Se analizaron 17 productos en 30 Mypimes en Plaza de la Recolucion, Centro Habana y Guanabo
+Se analizaron 17 productos en 30 mipymes en Plaza de la Recolución, Centro Habana y Guanabo
 
 En la base de datos del valor nutricional, se tomaron los datos a partir de las etiquetas de los productos y también por la aplicación [Fitia](https://fitia.app/es/). Estos valores presentan los macronutrientes de 100 gramos de cada producto en crudo, excepto el huevo que se obtuvo a partir de la unidad y la leche se covirtió de [litro a gramos](https://share.google/oaWMIUlMNlFlo1M0C). Además de que la leche en todas las mipymes se encuentran en un envase de caja de 1 litro.
 En el caso del atún, el producto es en lata y solo se consideró el peso escurrido de igual forma el paquete de pollo ya que contiene hueso
@@ -13,7 +13,7 @@ El dato del salario medio en La Habana lo obtuve desde la [ONEI](https://www.one
 
 ## Desarrollo
 
-En la sección **requisitos para una dieta saludable**  adapté las proporciones de la OMS/FAO para el contexto cubano distrubuyendo dentro del rango más cantidad de carbohidratos que de grasas y proteina porque son los carbohidratos más baratos.
+En la sección **requisitos para una dieta saludable** se adaptaron las proporciones de la OMS/FAO para el contexto cubano distrubuyendo dentro del rango más cantidad de carbohidratos que de grasas y proteina porque son los carbohidratos más baratos.
 
 
 ### Funciones
