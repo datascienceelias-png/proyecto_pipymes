@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 
 
-def proporcion_macronutrientes(
+def proporción_macronutrientes(
     proporcion=[75, 15, 10],
     macronutrientes=['Carbohidratos', 'Grasas', 'Proteínas']
    
@@ -34,28 +34,34 @@ def barra_apilada(producto, carbohidratos, proteínas, grasa):
     y1 = proteínas #valor 1proteina
     y2 = grasa        #valor 2
     y3 = carbohidratos    #valor 3
-    colores = ["#1F74B1", "#F38D30", "#CC243C"]
+    #colores = ["#1F74B1", "#F38D30", "#CC243C"]
 
     
     fig, ax = plt.subplots(figsize=(10, 6))
     #1era capa de la barra
-    ax.bar(x, y1, color="#CC243C",label="Proteínas") 
+    bar1 = ax.bar(x, y1, color="#CC243C",label="Proteínas") 
+    ax.bar_label(bar1, labels=y1, label_type="center")
 
      #2da capa
-    ax.bar(x, y2, bottom=y1, color="#F38D30", label="Grasas")
+    bar2 = ax.bar(x, y2, bottom=y1, color="#F38D30", label="Grasas")
+    ax.bar_label(bar2, labels=y2, label_type="center") #la función de esta parte es para colocar los valores encima o dentro de cada barra apilada
 
     #3ra capa: Sumar las 2 capas anteriores para formar la capa faltante
     super_bottom = [p + g for p,g in zip(y1,y2)]
-    ax.bar(x, y3, bottom=super_bottom, color="#1F74B1", label="Carbohidratos")
+    bar3 = ax.bar(x, y3, bottom=super_bottom, color="#1F74B1", label="Carbohidratos")
 
-    plt.xticks(rotation=45, ha='right') #Rotacion
+    ax.bar_label(bar3, labels=y3, label_type="edge")
+
+    plt.xticks(rotation=45, ha='right') #Rotación
     ax.legend(loc="upper right") #Leyenda
     fig.tight_layout() 
 
-    #Titulos y Etiquetas:
+    #Títulos y Etiquetas:
     ax.set_title("Precios promedio g/$ por macronutriente",fontweight='bold', fontsize=17)
     ax.set_xlabel("Productos",fontweight='bold', fontsize=12)
     ax.set_ylabel("Precios",fontweight='bold',  fontsize=12)
+
+
 
     plt.show()
 
@@ -64,17 +70,34 @@ def evolución_precios(precio, fecha):
     y = precio
 
     plt.figure(figsize=(10, 6))
-    plt.plot(x,y, marker = ".",linestyle='-', color = "b", label = "Precio del huevo" )
+    plt.plot(x,y, marker = ".",linestyle='-', color = "b", label = "Evolución de los precios" )
     
 
     plt.xticks(rotation=45, ha='right')
     plt.tight_layout()
-    plt.title("Evolución del precio", fontsize=16)
-    plt.xlabel("Fechas", fontsize=12)
-    plt.ylabel("Precios", fontsize=13)
+    plt.title("Evolución del precio",fontweight="bold", fontsize=16)
+    plt.xlabel("Fechas", fontweight="bold", fontsize=12)
+    plt.ylabel("Precios", fontweight="bold", fontsize=13)
     plt.grid(True, alpha=0.3) #Activar las cuadrículas para mejor visualización
     
     plt.show()
+
+
+def comparación(costo):
+        x = ["Salario", "Carbohidrato"]
+        y = [6449, costo]
+
+
+        plt.figure(figsize=(10, 6))
+        plt.bar(x, y, color="#1F74B1")
+        plt.title("Comparación entre el salario mensual y el costo para consumir los carbohidratos", fontweight='bold', fontsize=16)
+
+        plt.show()
+
+
+
+
+
 
 
     

@@ -91,8 +91,8 @@
             {"nombre": "leche de vaca", "marca": "Vima", "cantidad": 1030, "unidad": "g", "precio": 1300},
             {"nombre": "huevo", "cantidad": 30, "unidad": "unidad", "precio": 2790},
             {"nombre": "garbanzos", "cantidad": 500, "unidad": "g", "precio": 780},
-            {"nombre": "frijoles colorados", "cantidad": 500, "unidad": "g", "precio": 760},
-            {"nombre": "frijoles negros", "cantidad": 500, "unidad": "g", "precio": 750},
+            {"nombre": "frijoles colorados", "cantidad": 500, "unidad": "g", "precio": 700},
+            {"nombre": "frijoles negros", "cantidad": 500, "unidad": "g", "precio": 700},
             {"nombre": "arroz", "cantidad": 1000, "unidad": "g", "precio": "750"},
             {"nombre": "picadillo de pollo", "cantidad": 500, "unidad": "g", "precio": 380},
            {"nombre": "pechuga de pollo", "cantidad": 1000, "unidad": "g", "precio": 3000}
@@ -112,7 +112,7 @@
             {"nombre": "atún", "cantidad": 98, "unidad": "g", "precio": 600},
             {"nombre": "leche de vaca", "marca": "COVAP", "cantidad": "1030", "unidad": "g", "precio": 1500},
             {"nombre": "arroz", "cantidad": 1000, "unidad": "g", "precio": 750},
-            {"nombre": "frijoles colorados",  "cantidad": 453.592, "unidad": "g", "precio": 800},
+            {"nombre": "frijoles colorados",  "cantidad": 453.592, "unidad": "g", "precio": 700},
             {"nombre": "higado de pollo", "cantidad": 1000, "unidad": "g", "precio": 900},
             {"nombre": "picadillo de pollo", "marca": "Cocinerito", "cantidad": 509, "unidad": "g", "precio": 420}
             ]},
@@ -150,7 +150,7 @@
             {"nombre": "arroz", "cantidad": 1000, "unidad": "g", "precio": 900},
             {"nombre": "huevo", "cantidad": 30, "unidad": "unidad", "precio":3400},
             {"nombre": "espaguetis", "cantidad": 500, "unidad": "g", "precio": 415},
-            {"nombre": "frijoles colorados", "cantidad": 500, "unidad": "g", "precio": 900},
+            {"nombre": "frijoles colorados", "cantidad": 500, "unidad": "g", "precio": 800},
             {"nombre": "codito", "cantidad": 500, "unidad": "g", "precio": 415}
             ]},
 
@@ -167,8 +167,8 @@
             {"nombre": "higado de pollo", "cantidad": 1000, "unidad": "g", "precio": 960},
             {"nombre": "lomo de cerdo", "cantidad": 453.592, "unidad": "g" , "precio": 1300},
             {"nombre": "atún", "cantidad": 185, "unidad": "g", "precio": 820},
-            {"nombre": "frijoles negros", "cantidad": 453.592, "unidad": "g", "precio":980},
-            {"nombre": "frijoles colorados", "cantidad": 453.592, "unidad": "g", "precio": 1010},
+            {"nombre": "frijoles negros", "cantidad": 453.592, "unidad": "g", "precio":680},
+            {"nombre": "frijoles colorados", "cantidad": 453.592, "unidad": "g", "precio": 700},
             {"nombre": "arroz", "cantidad": 1000, "unidad": "g", "precio": 780},
             {"nombre": "codito", "cantidad": 500, "unidad": "g", "precio": 350},
             {"nombre": "leche de vaca", "marca": "Vima", "cantidad": 1030, "unidad": "g", "precio": 1180}
@@ -181,8 +181,8 @@
         "dirección": "Esquina de 23 y 28",
          "productos":[ 
              {"nombre": "picadillo de pollo", "cantidad": 400, "unidad": "g", "precio": 600},
-             {"nombre": "frijoles colorados", "cantidad": 500, "unidad": "g", "precio": 1000},
-             {"nombre": "frijoles negros", "cantidad": 500 , "unidad": "g", "precio": 1000},
+             {"nombre": "frijoles colorados", "cantidad": 500, "unidad": "g", "precio": 800},
+             {"nombre": "frijoles negros", "cantidad": 500 , "unidad": "g", "precio": 740},
              {"nombre": "arroz", "cantidad": 1000, "unidad": "g", "precio": 740},
              {"nombre": "codito", "cantidad": 500, "unidad": "g", "precio": 350},
              {"nombre": "atún", "cantidad": 170, "unidad": "g", "precio": 700},
@@ -252,7 +252,7 @@
          "productos":[ 
              {"nombre": "pechuga de pollo", "cantidad":2000 , "unidad": "g", "precio": 5060},
              {"nombre": "frijoles negros", "cantidad": 500, "unidad": "g", "precio": 810},
-             {"nombre": "frijoles colorados",  "cantidad": 1000, "unidad": "g", "precio": 1670},
+             {"nombre": "frijoles colorados",  "cantidad": 1000, "unidad": "g", "precio": 1600},
              {"nombre": "codito", "cantidad": 500, "unidad": "g", "precio": 355},
              {"nombre": "espaguetis", "cantidad": 500, "unidad": "g", "precio": 355},
              {"nombre": "pierna de cerdo", "cantidad": 453.592, "unidad": "g", "precio": 989},
@@ -360,8 +360,8 @@
              {"nombre": "codito", "cantidad":500, "unidad": "g", "precio":350},
              {"nombre": "molleja de pollo", "cantidad": 1000, "unidad": "g", "precio":1200},
              {"nombre": "atún", "cantidad":98 , "unidad": "g", "precio":600 },
-             {"nombre": "frijoles negros", "cantidad": 2000 , "unidad": "g", "precio":1990},
-            {"nombre": "frijoles colorados", "cantidad":453.592 ,"unidad": "g", "precio":780},
+             {"nombre": "frijoles negros", "cantidad": 2000 , "unidad": "g", "precio":1980},
+            {"nombre": "frijoles colorados", "cantidad":453.592 ,"unidad": "g", "precio":700},
             {"nombre": "higado de pollo", "cantidad": 1000, "unidad": "g", "precio":990},
              {"nombre": "leche de vaca", "cantidad": 1030, "unidad": "g", "precio":1200}
             ]},
@@ -406,7 +406,7 @@
         "ubicación": "23.139306826822352, -82.35409832158794",
         "dirección": "calle Habana e/ O´Reilly y San Juan Dios",
          "productos":[ 
-             {"nombre": "frijoles colorados", "cantidad": 500, "unidad": "g", "precio":720 },
+             {"nombre": "frijoles colorados", "cantidad": 500, "unidad": "g", "precio":700 },
              {"nombre": "lomo de cerdo", "cantidad": 2000, "unidad":"g" , "precio":4455 },
              {"nombre": "pechuga de pollo", "cantidad":45359.2, "unidad": "g", "precio":11900 },
              {"nombre": "huevo", "cantidad":30 , "unidad": "unidad", "precio":3000 },
