@@ -1,4 +1,4 @@
-# ¿Es un lujo la vida saludable en Cuba?:
+# ¿Es un lujo la vida saludable en Cuba?
 
 
 ## Base de Datos
@@ -12,8 +12,6 @@ Los datos de la evoluvión del precio del arroz, huevo, lomo de cerdo, pierna de
 El dato del salario medio en La Habana lo obtuve desde la [ONEI](https://www.onei.gob.cu/sites/default/files/publicaciones/2025-04/salario-medio-en-cifras-2024-edicion-2025.pdf)
 
 ## Desarrollo
-
-
 
 En la grafica de pastel sobre las proporciones de los macronutientes se adaptaron las proporciones de la [OMS/FON](https://iris.who.int/server/api/core/bitstreams/f06e1673-3689-4cb1-8a37-762a3e9c5360/content) para el contexto cubano distrubuyendo dentro del rango más cantidad de carbohidratos que de grasas y proteina porque son los carbohidratos más baratos.
 
@@ -54,7 +52,6 @@ El siguiente gráfico muestra el costo promedio, en CUP, de obtener 1 gramo de c
 Para cada producto, la altura de cada segmento de la barra apilada representa el precio promedio por gramo de ese macronutriente.
 Por lo tanto, mientras más alta es la barra asociada a un macronutriente en un producto, más costoso resulta obtener 1 gramo de ese macronutriente a partir de dicho producto. En consecuencia, para cubrir las necesidades diarias de macronutrientes, los productos con barras más altas implican un mayor gasto económico.
 Además, es posible comparar directamente los precios por gramo de un mismo macronutriente entre diferentes productos: observando todos los segmentos de proteína (del mismo color) en todos los productos, se puede identificar cuál producto ofrece la proteína más barata por gramo. De igual manera, comparando los segmentos de grasas entre todos los productos se identifica cuál es la fuente más económica de grasas, y así sucesivamente con los carbohidratos. Esta comparación es fundamental para optimizar el presupuesto nutricional: si necesitas proteína económica, eliges el producto con el segmento de proteína más bajo; si necesitas carbohidratos baratos, identificas el producto con el segmento de carbohidratos más bajo, y así para cada macronutriente. Si una barra no tiene el color asociado a un macronutrientes significa que ese producto no contiene ese tipo de nutriente.
-
 En este análisis podemos demostrar que los productos más baratos no implica que tenga más grasas, proteina o carbohidrato que otro producto más costoso
 
 

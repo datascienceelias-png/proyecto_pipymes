@@ -83,14 +83,20 @@ def evolución_precios(precio, fecha):
     plt.show()
 
 
-def comparación(costo):
-        x = ["Salario", "Carbohidrato"]
-        y = [6449, costo]
+def comparación(frijoles_negros, muslo_pollo):
+        x = ["Salario", "Frijoles Negros", "Muslo de Pollo"]
+        y = [6449, frijoles_negros, muslo_pollo]
 
 
         plt.figure(figsize=(10, 6))
-        plt.bar(x, y, color="#1F74B1")
-        plt.title("Comparación entre el salario mensual y el costo para consumir los carbohidratos", fontweight='bold', fontsize=16)
+
+        barras = plt.bar(x, y, color="#1F74B1")
+
+        plt.bar_label(barras)
+
+        plt.title("Comparación entre el salario promedio y el costo para consumir las proteinas", fontweight='bold', fontsize=16)
+        plt.ylabel("Precio", fontweight='bold', fontsize=14)
+    
 
         plt.show()
 
