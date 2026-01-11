@@ -8,8 +8,12 @@ En la Cuba actual, acceder a una alimentación básica es un desafío crítico d
 Un ejemplo claro es el cartón de 30 huevos: con un precio promedio de 3,100 CUP, representa casi el 50% del salario mensual. Bajo esta realidad, un ciudadano solo podría costear un huevo diario, obteniendo apenas 6 gramos de proteína al día, una cifra insuficiente frente a los requerimientos biológicos mínimos.
 Por tanto, este proyecto se fundamenta en la necesidad de documentar, mediante datos reales de 30 Mipymes y series temporales, cómo el factor económico se ha convertido en la principal barrera para la salud en Cuba, transformando la nutrición balanceada en un privilegio fuera del alcance de la mayoría.
 
+## Estructura del repositorio
+El archivo *análisis* contiene la historia basada en los datos junto con las 5 gráficos y el resultado de todo el análisis. En este sección se encuentra explicado como se llevó a cabo el proyecto
+En la carpeta *data* se encuentra toda la base de datos utilizada y en la carpeta *src* están la biblioteca programada con las funciones utilizadas y el código de los gráficos. 
 
 ## Base de Datos
+
 Se analizaron 17 productos en 30 mipymes de Plaza de la Revolución, Centro Habana y Guanabo. Los alimentos identificados —muslo de pollo, pechuga de pollo, hígado de pollo, picadillo de pollo, huevo, molleja de pollo, lomo de cerdo, atún, pierna de cerdo, solomillo de cerdo, garbanzos, frijoles negros, frijoles colorados, leche de vaca, arroz, codito y espaguetis— son frecuentes en estas empresas y pertenecen a grupos que la [OMS](https://www.who.int/es/news-room/fact-sheets/detail/healthy-diet) reconoce como necesarios para una dieta saludable, con el propósito de evaluar la relación costo-beneficio nutricional de cada uno.
 
 En la base de datos del **valor nutricional**, se tomaron los datos a partir de las etiquetas de los productos y también por la aplicación [Fitia](https://fitia.app/es/). Estos valores presentan los macronutrientes de 100 gramos de cada producto en crudo, excepto el huevo que se obtuvo a partir de la unidad y la leche se covirtió de [litro a gramos](https://share.google/oaWMIUlMNlFlo1M0C). Además de que la leche en todas las mipymes se encuentran en un envase de caja de 1 litro.
