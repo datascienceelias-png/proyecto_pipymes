@@ -38,11 +38,16 @@ Muslo de pollo
 Estos son frecuentes en las mipymes y pertenecen a grupos que la [OMS](https://www.who.int/es/news-room/fact-sheets/detail/healthy-diet) reconoce como necesarios para una dieta saludable, con el propósito de evaluar la relación costo-beneficio nutricional de cada uno.
 
 En la base de datos del **valor nutricional**, se tomaron los datos a partir de las etiquetas de los productos y también por la aplicación [Fitia](https://fitia.app/es/). Estos valores presentan los macronutrientes de 100 gramos de cada producto en crudo, excepto el huevo que se obtuvo a partir de la unidad y la leche se covirtió de [litro a gramos](https://share.google/oaWMIUlMNlFlo1M0C). Además de que la leche en todas las mipymes se encuentran en un envase de caja de 1 litro.
-En el caso del atún, el producto es en lata y solo se consideró el peso escurrido de igual forma el paquete de pollo ya que contiene hueso.
+En el caso del atún, el producto es en lata y solo se consideró el peso escurrido de igual forma el paquete de pollo ya que contiene hueso. 
+Su estructura se basa que en cada llave principal está el nombre del producto y los valores son la cantidad de macronutrientes que tiene.
 
-Los datos de la **evoluvión del precio** del arroz, huevo, lomo de cerdo, pierna de cerdo, frijoles negros y frijoles colorados se obtuvieron desde enero del  2024 hasta noviembre 2025 en la [ONEI](https://www.onei.gob.cu/publicaciones-economico?field_categoria_de_temas_target_id=495&field_year_value=2025&title=)
+Los datos de la **evoluvión del precio** del arroz, huevo, lomo de cerdo, pierna de cerdo, frijoles negros y frijoles colorados se obtuvieron desde enero del  2024 hasta noviembre 2025 en la [ONEI](https://www.onei.gob.cu/publicaciones-economico?field_categoria_de_temas_target_id=495&field_year_value=2025&title=). En este archivo las llaves principales son las fechas donde se registraton los precios y contiene cada fecha otro diccionario con el nombre del producto y el precio mínimo y máximo en la fecha correspondinte  
 
-El dato del salario medio en La Habana lo obtuve desde la [ONEI](https://www.onei.gob.cu/sites/default/files/publicaciones/2025-04/salario-medio-en-cifras-2024-edicion-2025.pdf)
+El dato del **salario medio en La Habana** lo obtuve desde la [ONEI](https://www.onei.gob.cu/sites/default/files/publicaciones/2025-04/salario-medio-en-cifras-2024-edicion-2025.pdf)
+
+El dato de las **mipymes** fueron tomados desde finales de noviembre y principios de diciembre del 2025. La estructura es muy simple: la llave "mipyme" es la principal del json y contiene una lista con varios diccionarios, cada diccionario es una mipyme diferente. En cada mipyme hay una clave llamada productos siendo su valor un diccionario distinto para cada uno de los productos.
+
+
 
 ## Desarrollo
 
