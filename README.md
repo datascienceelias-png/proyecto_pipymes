@@ -1,6 +1,8 @@
 # ¿Es un lujo la vida saludable en Cuba?
 ***Estudiante: Elias Fabré Rosa***
 
+***Facultad de Matemática y Computación (MATCOM), La Habana***
+
 ***Proyecto de Ciencia de Datos - 1er Año***
 
 En la Cuba actual, acceder a una alimentación básica es un desafío crítico debido a la desconexión entre los ingresos y el costo de vida. Con un salario promedio de 6,449 CUP, el trabajador estatal se enfrenta a un mercado donde productos esenciales consumen gran parte de su presupuesto.
