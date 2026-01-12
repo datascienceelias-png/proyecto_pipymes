@@ -13,6 +13,7 @@ Por tanto, este proyecto se fundamenta en la necesidad de documentar, mediante d
 ## Estructura del repositorio
 El archivo *análisis* contiene la historia basada en los datos junto con las 5 gráficos y el resultado de todo el análisis. En este sección se encuentra explicado como se llevó a cabo el proyecto
 En la carpeta *data* se encuentra toda la base de datos utilizada y en la carpeta *src* están la biblioteca programada con las funciones utilizadas y el código de los gráficos. 
+En la carpeta *Evidencias* estan alguas fotos de las mipymes
 
 ## Base de Datos
 
@@ -45,7 +46,7 @@ Los datos de la **evoluvión del precio** del arroz, huevo, lomo de cerdo, piern
 
 El dato del **salario medio en La Habana** lo obtuve desde la [ONEI](https://www.onei.gob.cu/sites/default/files/publicaciones/2025-04/salario-medio-en-cifras-2024-edicion-2025.pdf)
 
-El dato de las **mipymes** fueron tomados desde finales de noviembre y principios de diciembre del 2025. La estructura es muy simple: la llave "mipyme" es la principal del json y contiene una lista con varios diccionarios, cada diccionario es una mipyme diferente. En cada mipyme hay una clave llamada productos que contiene una clave llamada productos, cuyo valor es una lista de diccionarios, donde cada elemento representa un producto individual con su nombre, cantidad, unidad y precio
+El dato de las **mipymes** fueron tomados desde finales de noviembre y principios de diciembre del 2025. La estructura es muy simple: la llave "mipyme" es la principal del json y contiene una lista con varios diccionarios, cada diccionario es una mipyme diferente. En cada mipyme hay una clave llamada productos que contiene una clave llamada productos, cuyo valor es una lista de diccionarios, donde cada elemento representa un producto individual con su nombre, cantidad, unidad y precio. 
 
 
 
