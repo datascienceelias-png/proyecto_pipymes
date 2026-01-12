@@ -17,7 +17,7 @@ En la carpeta *data* se encuentra toda la base de datos utilizada y en la carpet
 ## Base de Datos
 
 Se analizaron 17 productos en 30 mipymes de Plaza de la Revolución, Centro Habana y Guanabo. Los alimentos identificados: 
-·Muslo de pollo
+Muslo de pollo
 ·Pechuga de pollo
 ·Hígado de pollo
 ·Picadillo de pollo
@@ -35,7 +35,7 @@ Se analizaron 17 productos en 30 mipymes de Plaza de la Revolución, Centro Haba
 ·Codito
 ·Espaguetis
 
-Estos son frecuentes en estas empresas y pertenecen a grupos que la [OMS](https://www.who.int/es/news-room/fact-sheets/detail/healthy-diet) reconoce como necesarios para una dieta saludable, con el propósito de evaluar la relación costo-beneficio nutricional de cada uno.
+Estos son frecuentes en las mipymes y pertenecen a grupos que la [OMS](https://www.who.int/es/news-room/fact-sheets/detail/healthy-diet) reconoce como necesarios para una dieta saludable, con el propósito de evaluar la relación costo-beneficio nutricional de cada uno.
 
 En la base de datos del **valor nutricional**, se tomaron los datos a partir de las etiquetas de los productos y también por la aplicación [Fitia](https://fitia.app/es/). Estos valores presentan los macronutrientes de 100 gramos de cada producto en crudo, excepto el huevo que se obtuvo a partir de la unidad y la leche se covirtió de [litro a gramos](https://share.google/oaWMIUlMNlFlo1M0C). Además de que la leche en todas las mipymes se encuentran en un envase de caja de 1 litro.
 En el caso del atún, el producto es en lata y solo se consideró el peso escurrido de igual forma el paquete de pollo ya que contiene hueso.
@@ -102,7 +102,7 @@ El resultado del de huevo es el promedio del valor de una unidad.
 
 **datos_evolución_precio**
 En esta función se preoaran los datos necesarios para la gráfica de líneas donde muestra la evolución de algunos productos. 
-Returna una lista con todas las fechas registradas de los precios de los productos y otra lista con el precio promedio en los productos. Ambas listas coinciden en la misma posición el precio de los productos con la fecha correspondiente
+Returna una lista con todas las fechas registradas de los precios de los productos y otra lista con el precio promedio en los productos. Ambas listas coinciden en la misma posición el precio de los productos con la fecha correspondiente.
 
 
 
