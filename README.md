@@ -45,7 +45,7 @@ Los datos de la **evoluvión del precio** del arroz, huevo, lomo de cerdo, piern
 
 El dato del **salario medio en La Habana** lo obtuve desde la [ONEI](https://www.onei.gob.cu/sites/default/files/publicaciones/2025-04/salario-medio-en-cifras-2024-edicion-2025.pdf)
 
-El dato de las **mipymes** fueron tomados desde finales de noviembre y principios de diciembre del 2025. La estructura es muy simple: la llave "mipyme" es la principal del json y contiene una lista con varios diccionarios, cada diccionario es una mipyme diferente. En cada mipyme hay una clave llamada productos siendo su valor un diccionario distinto para cada uno de los productos.
+El dato de las **mipymes** fueron tomados desde finales de noviembre y principios de diciembre del 2025. La estructura es muy simple: la llave "mipyme" es la principal del json y contiene una lista con varios diccionarios, cada diccionario es una mipyme diferente. En cada mipyme hay una clave llamada productos que contiene una clave llamada productos, cuyo valor es una lista de diccionarios, donde cada elemento representa un producto individual con su nombre, cantidad, unidad y precio
 
 
 
