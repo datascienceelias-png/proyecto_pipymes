@@ -39,7 +39,7 @@ def barra_apilada(producto, carbohidratos, proteínas, grasa):
     
     fig, ax = plt.subplots(figsize=(10, 6))
     #1era capa de la barra
-    bar1 = ax.bar(x, y1, color="#CC243C",label="Proteínas") 
+    bar1 = ax.bar(x, y1, color="#D8334C",label="Proteínas") 
     ax.bar_label(bar1, labels=y1, label_type="center")
 
      #2da capa

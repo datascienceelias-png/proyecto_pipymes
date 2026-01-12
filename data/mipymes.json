@@ -69,7 +69,6 @@
             {"nombre": "pechuga de pollo", "cantidad": 1000, "unidad": "g", "precio": 3000 },
             {"nombre": "pechuga de pollo", "cantidad": 2000, "unidad": "g", "precio": 5500},
             {"nombre": "lomo de cerdo", "cantidad": 453.592, "unidad": "g", "precio": 1300 },
-            {"nombre": "pollo entero deshuesado", "cantidad": 2500, "unidad": "g", "precio": 5700},
             {"nombre": "frijoles negros", "cantidad": 500, "unidad": "g", "precio": 670},
             {"nombre": "atún", "cantidad": 98, "unidad": "g", "precio": 520},
             {"nombre": "solmillo de cerdo", "cantidad": 453.592, "unidad": "g", "precio": 1300},

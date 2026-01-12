@@ -14,7 +14,26 @@ En la carpeta *data* se encuentra toda la base de datos utilizada y en la carpet
 
 ## Base de Datos
 
-Se analizaron 17 productos en 30 mipymes de Plaza de la Revolución, Centro Habana y Guanabo. Los alimentos identificados —muslo de pollo, pechuga de pollo, hígado de pollo, picadillo de pollo, huevo, molleja de pollo, lomo de cerdo, atún, pierna de cerdo, solomillo de cerdo, garbanzos, frijoles negros, frijoles colorados, leche de vaca, arroz, codito y espaguetis— son frecuentes en estas empresas y pertenecen a grupos que la [OMS](https://www.who.int/es/news-room/fact-sheets/detail/healthy-diet) reconoce como necesarios para una dieta saludable, con el propósito de evaluar la relación costo-beneficio nutricional de cada uno.
+Se analizaron 17 productos en 30 mipymes de Plaza de la Revolución, Centro Habana y Guanabo. Los alimentos identificados: 
+·Muslo de pollo
+·Pechuga de pollo
+·Hígado de pollo
+·Picadillo de pollo
+·Huevo
+·Molleja de pollo
+·Lomo de cerdo
+·Atún
+·Pierna de cerdo
+·Solomillo de cerdo
+·Garbanzos
+·Frijoles negros
+·Frijoles colorados
+·Leche de vaca
+·Arroz
+·Codito
+·Espaguetis
+
+Estos son frecuentes en estas empresas y pertenecen a grupos que la [OMS](https://www.who.int/es/news-room/fact-sheets/detail/healthy-diet) reconoce como necesarios para una dieta saludable, con el propósito de evaluar la relación costo-beneficio nutricional de cada uno.
 
 En la base de datos del **valor nutricional**, se tomaron los datos a partir de las etiquetas de los productos y también por la aplicación [Fitia](https://fitia.app/es/). Estos valores presentan los macronutrientes de 100 gramos de cada producto en crudo, excepto el huevo que se obtuvo a partir de la unidad y la leche se covirtió de [litro a gramos](https://share.google/oaWMIUlMNlFlo1M0C). Además de que la leche en todas las mipymes se encuentran en un envase de caja de 1 litro.
 En el caso del atún, el producto es en lata y solo se consideró el peso escurrido de igual forma el paquete de pollo ya que contiene hueso.
@@ -26,7 +45,7 @@ El dato del salario medio en La Habana lo obtuve desde la [ONEI](https://www.one
 ## Desarrollo
 
 #### Gráficos
-En el **gráfico de lineas** donde se visualiza la evolución de los precios de alguns productos desde el enero 2024 hasta noviembre 2025 se tiene en cuenta el siguiente análisis. Para conocer la variación del precio en estos años se tuvo en cuenta la fórmula:
+En el gráfico de lineas donde se visualiza la **evolución de los precios** de alguns productos desde el enero 2024 hasta noviembre 2025 se tiene en cuenta el siguiente análisis. Para conocer la variación del precio en estos años se tuvo en cuenta la fórmula:
 
 Variación(%) = (U-P)/P *100
 
@@ -53,10 +72,7 @@ Para visualizar los datos correspondientes se tuvieron en cuenta el costo para o
 
 
 
-### Funciones
-La función **precio_promedio_lb** tiene como objetivo calcular el precio promedio que una persona debe gastar en comprar 1 libra de cada producto. Pero el peso escurrido de las diferentes latas de atún de todas las mipymes nunca llega a 1 libra, por eso el análisis se basa en el precio promedio para comprar 1 lata. 
-En el caso de la leche, todos los envases son en una caja que contiene 1 litro de leche aproximadamente de 1030g que son aproximadamente 2,27 libras (1034/453.592). Por tanto el resultado de la funcion de la leche es el promedio de costo de un envace de 1 litro de leche. 
-El resultado del de huevo es el promedio del valor de una unidad.
+### Funciones utilizadas en el Análisis 
 
 La función **costo_promedio_nutr** fue creada para conocer el precio de obtener 1 gramo del macronutriente que el usuario desea analizar. Además revela cuales los alimentos más económicos con mayor cantidad del macronutriente. La funcón se basa en las siguiente formula:
 
@@ -68,10 +84,23 @@ Explicación: La divición entre el valor nutricional y 100 es para conocer la p
 
 Explicación: Se divide el precio del producto entre la cantidad total de macronutriente que contiene, y devuelve el costo para obtener 1 gramo de ese macronutriente. Un ejemplo práctico para entenderlo es el siguiente: si compras una caja de lapices en 100cup y la caja contiene 10 lapices entonces cada lápiz te cuestó 10cup
 
+**calcuar_macronutrientes**:
+A partir de la cantidad de kcal que el usuario incerte en el argumento de la función, esta devuelve la cantidad en gramo de proteina, grasa y carbohidrato que este usuario debe consumir diario. Para ello se utilizaron los datos a partir de un articulo publicado por la [Dirección General de Salud Pública de Madrid, España](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.comunidad.madrid/sites/default/files/doc/sanidad/1._valor_energetico_saber_mas.pdf&ved=2ahUKEwj3kZS22PORAxWuSTABHQuFO2oQFnoECBwQAw&usg=AOvVaw0c4toutOgq-dTvHpn6qLhp) donde 1 gramo de proteina y carbohidrato aporta 4 kcal y 1 gramo de grasas 9 kcal. Para obtener la cantidad de cada macronutriente se utilizó la siguiente fórmula
 
-**calcular_macronutrientes**:
-Calcula la cantidad de cada macronutriente que una persona debe consumir al dia dependiendo de la cantidad de kilocalorias que debe consumir. Para ello se utilizaron los datos a partir de un articulo publicado por la [Dirección General de Salud Pública de Madrid, España](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.comunidad.madrid/sites/default/files/doc/sanidad/1._valor_energetico_saber_mas.pdf&ved=2ahUKEwj3kZS22PORAxWuSTABHQuFO2oQFnoECBwQAw&usg=AOvVaw0c4toutOgq-dTvHpn6qLhp) donde 1 gramo de proteina y carbohidrato aporta 4 kcal y 1 gramo de grasas 9 kcal
+cantidad_macronutriente =(PM/100 * kcal) / A
 
+-PM es la proporción en % del macronutriente que se necesita 
+-Kcal es la cantidad de kilocalorías que el usurio debe consumir diario
+-A es la cantidad de kcal que aporta el macronutriente que se necesita
+
+
+La función **precio_promedio_lb** tiene como objetivo calcular el precio promedio que una persona debe gastar en comprar 1 libra de cada producto. Pero el peso escurrido de las diferentes latas de atún de todas las mipymes nunca llega a 1 libra, por eso el análisis se basa en el precio promedio para comprar 1 lata. 
+En el caso de la leche, todos los envases son en una caja que contiene 1 litro de leche aproximadamente de 1030g que son aproximadamente 2,27 libras (1034/453.592). Por tanto el resultado de la funcion de la leche es el promedio de costo de un envace de 1 litro de leche. 
+El resultado del de huevo es el promedio del valor de una unidad.
+
+**datos_evolución_precio**
+En esta función se preoaran los datos necesarios para la gráfica de líneas donde muestra la evolución de algunos productos. 
+Returna una lista con todas las fechas registradas de los precios de los productos y otra lista con el precio promedio en los productos. Ambas listas coinciden en la misma posición el precio de los productos con la fecha correspondiente
 
 
 

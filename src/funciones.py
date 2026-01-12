@@ -29,16 +29,16 @@ def costo_promedio_nutr(data_mipyme, productos, valor_nutricional):
 
 
     """
-    output = {}
+    salida = {}
 
-    for i, nombre_nutri in enumerate(productos): # El código enumerate lo uso para acceder tanto como al producto como su posición para luego acceder al precio del producto
+    for i, nombre_nutri in enumerate(productos): # El código enumerate lo uso para obtener tanto como el nombre del producto como su posición para luego buscar en el diccionario del valor nutricional el producto correspondiente
         lista_costos = [] #Esta lista es para calcular el costo promedio, se reinicia los valores en cada iteración
 
         for mipyme in data_mipyme["mipyme"]:
-            for producto in mipyme["productos"]:
+            for producto in mipyme["productos"]: 
 
                 if producto["nombre"] == "huevo": # EL costo del huevo no es por 100 gramos sino por unidad 
-                    precio = float(producto["precio"])
+                    precio = float(producto["precio"])# Convertir en float, de lo contrario da error porque se lee como string
                     gramos = float(producto["cantidad"])
                     macro_total = valor_nutricional[i] * gramos #EL inidice i es para buscar en el diccionario del valor nutricional el producto correspondiente
 
@@ -46,22 +46,22 @@ def costo_promedio_nutr(data_mipyme, productos, valor_nutricional):
                         costo_por_gramo = precio / macro_total
                         lista_costos.append(costo_por_gramo)
                         
-                        continue
+                        continue #si en la iteración se encuentra el huevo, se salta los demas codigos y salta al siguiente producto de la mipyme
 
                 elif producto["nombre"] == nombre_nutri:
-                        gramos = float(producto["cantidad"]) # Convertir en float, de lo contrario da error porque se lee como string
+                        gramos = float(producto["cantidad"]) 
                         precio = float(producto["precio"])
 
                         macro_total = (valor_nutricional[i] / 100) * gramos
 
             if macro_total > 0: # Evitar división por cero cuando no hay carbohidratos en algunos alimentos
-                costo_por_gramo = precio / macro_total
-                lista_costos.append(costo_por_gramo)
+                    costo_por_gramo = precio / macro_total
+                    lista_costos.append(costo_por_gramo)
 
-        
-        output[nombre_nutri] = round(promedio(lista_costos), 2)
+            
+            salida[nombre_nutri] = round(promedio(lista_costos), 2) #La función returna un diccionario llamado "salida" donde cada llave es el nombre del producto y su valor es el precio redondeado
 
-    return output
+    return salida
 
 
 
@@ -71,9 +71,9 @@ def calcular_macronutrientes(kcal):
     """
     Calcula la cantidad de macronutrientes en gramos según las calorías necesarias.
     """
-    carbohidratos = (0.74 * kcal) / 4
-    grasas = (0.15 * kcal) / 9
-    proteinas = (0.10 * kcal) / 4
+    carbohidratos = (75/100 * kcal) / 4
+    grasas = (15/100 * kcal) / 9
+    proteinas = (10/100 * kcal) / 4
 
     return {
         "carbohidratos": round(carbohidratos, 2),
@@ -143,7 +143,7 @@ def datos_evolución_precios(precios, producto):
     fechas = []
     promedio_precio = []
     for mes in precios.keys(): #Iterar por cada mes 
-        fechas.append(mes) # las llaves son las fechas
+        fechas.append(mes) # las llaves del diccionario son las fechas
 
          #los datos del precio del huevo son por unidad, por eso se multiplica por 30 para obtener el precio del cartón
         if producto == "huevo" and producto in precios[mes]: #acceder al producto en ese mes
@@ -152,7 +152,7 @@ def datos_evolución_precios(precios, producto):
             promedio_precio.append(promedio)
             continue
             
-        elif producto in precios[mes]:
+        elif producto in precios[mes]: #buscar en cada iteración el producto del argumento para luego calcular su promedio
             datos_producto = precios[mes][producto]
             promedio = round((datos_producto["min"] + datos_producto["max"]) / 2) # Calcular el promedio
             promedio_precio.append(promedio)
