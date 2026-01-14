@@ -103,18 +103,25 @@ def precio_promedio_lb(listado_de_productos, mipyme):
         lista_precio = [] 
 
         for dic in mipyme["mipyme"]:
-            for products in (dic["productos"]):
+            for products in (dic["productos"]): #products es una lista que tiene a los productos de una mipyme
                 #print(products)
         
                 if producto == "huevo" and products["nombre"] == "huevo":
                     precio_unidad = round((float(products["precio"]))/ 30) # El cartón de huevo siempre tiene 30 unidades
                     
                     lista_precio.append(precio_unidad) 
+                    break
+
 
                 elif producto == "atún" and products["nombre"] == "atún":  
                     lista_precio.append(float(products["precio"]))
+                    break
 
-                elif products["nombre"] == producto and producto!= "huevo" and producto !="atún":
+                elif producto == "leche de vaca" and products["nombre"] == "leche de vaca":
+                    lista_precio.append(float(products["precio"]))
+                    break
+                    
+                elif products["nombre"] == producto and producto!= "huevo" and producto !="atún" and producto != "leche de vaca":
                     lb = float(products["cantidad"]) / 453.592 #Convertir en float los datos necesrios porque python los reconoce como str
                     precio_lb = float(products["precio"]) / lb
                     lista_precio.append(precio_lb)
@@ -122,14 +129,9 @@ def precio_promedio_lb(listado_de_productos, mipyme):
                     
         output[producto] = round(promedio(lista_precio), 2)    
 
-                    
-        if producto == "leche de vaca":
-            # convertir el promedio por libra al promedio por envase de 1030 g
-            promedio_lb = promedio(lista_precio)
-            libras_envase = 1030 / 453.592
-            output[producto] = round(promedio_lb * libras_envase, 2)
-        else:
-            output[producto] = round(promedio(lista_precio), 2)
+
+
+        
 
     return output
 

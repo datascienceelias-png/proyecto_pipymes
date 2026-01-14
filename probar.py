@@ -65,5 +65,52 @@ def costo_promedio_nutr(data_mipyme, productos, valor_nutricional):
     return salida
 
 
-print(costo_promedio_nutr(mipyme, productos, proteina))
-    
+#print(costo_promedio_nutr(mipyme, productos, proteina))
+
+
+def precio_promedio_lb(listado_de_productos, mipyme):
+
+    """
+    Calcula el precio promedio de 1 libra de cada  prodcutos,
+
+    El valor del huevo se tiene en cuenta por una unidad,
+
+    En caso de las latas de atún como su peso es menor a de una libra, el analisis seria para saber el precio promedio para comprar una lata de atun
+
+
+    """
+
+    output = {}
+    for producto in listado_de_productos:
+        lista_precio = [] 
+
+        for dic in mipyme["mipyme"]:
+            for products in (dic["productos"]):
+                #print(products)
+        
+                if producto == "huevo" and products["nombre"] == "huevo":
+                    precio_unidad = round((float(products["precio"]))/ 30) # El cartón de huevo siempre tiene 30 unidades
+                    
+                    lista_precio.append(precio_unidad) 
+
+                elif producto == "atún" and products["nombre"] == "atún":  
+                    lista_precio.append(float(products["precio"]))
+
+                elif products["nombre"] == producto and producto!= "huevo" and producto !="atún":
+                    lb = float(products["cantidad"]) / 453.592 #Convertir en float los datos necesrios porque python los reconoce como str
+                    precio_lb = float(products["precio"]) / lb
+                    lista_precio.append(precio_lb)
+                
+                    
+        output[producto] = round(promedio(lista_precio), 2)    
+
+                    
+        if producto == "leche de vaca":
+            # convertir el promedio por libra al promedio por envase de 1030 g
+            promedio_lb = promedio(lista_precio)
+            libras_envase = 1030 / 453.592
+            output[producto] = round(promedio_lb * libras_envase, 2)
+        else:
+            output[producto] = round(promedio(lista_precio), 2)
+
+    return output
