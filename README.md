@@ -86,11 +86,18 @@ La función **costo_promedio_nutr** fue creada para conocer el precio de obtener
 
 *cantidad total de macronutriente = (valor nutricional del producto /100) * Cantidad total en gramos del producto*
 
-Explicación: La divición entre el valor nutricional y 100 es para conocer la proporción del macronutriente. Significa que cada gramo del producto tiene X gramos del macronutriente seleccionado. Al multiplicarlo por la cantidad total en gramos del producto devuelve el total en gramos del macronutriente
+Explicación: La divición entre el valor nutricional y 100 es para conocer la proporción del macronutriente. Significa que cada gramo del producto tiene X gramos del macronutriente seleccionado. Al multiplicarlo por la cantidad total en gramos del producto devuelve el total en gramos del macronutriente.
+ejemplo si el frijol negro tiene 22g de proteina entonces 22/100 = 0,22g de proteina aporta 1 gramo de frijoles y si peso del producto es de 500g, 
+0,22*500 = 110g de proteina total
 
 *costo por gramo = precio / cantidad total de macronutriente*
 
-Explicación: Se divide el precio del producto entre la cantidad total de macronutriente que contiene, y devuelve el costo para obtener 1 gramo de ese macronutriente. Un ejemplo práctico para entenderlo es el siguiente: si compras una caja de lapices en 100cup y la caja contiene 10 lapices entonces cada lápiz te cuestó 10cup
+Explicación: Se divide el precio del producto entre la cantidad total de macronutriente que contiene, y devuelve el costo para obtener 1 gramo de ese macronutriente. Por ejemplos si el precio del frijol es de 700cup, 700/110g = 6.36cup el costo de 1 gramo de proteina.
+
+A diferencia de otros alimentos donde el peso varía y determina la cantidad total de nutrientes, el huevo se vende en un formato estándar por unidades. Debido a esta cantidad fija, se omite la división entre 100 (que busca la proporción por gramo) y se procede a multiplicar directamente el valor nutricional de un huevo por el número de unidades en el cartón para obtener el total del macronutriente.
+
+En cada iteración, se busca el producto correspondiente en todas las MiPYMEs disponibles. Por cada coincidencia encontrada, se calcula el costo de obtener un gramo del macronutriente seleccionado y se añade a una lista. Una vez finalizada la búsqueda en todos los establecimientos, se calcula el promedio de los costos almacenados, se redondea el valor y se devuelve como el resultado final esperado.
+
 
 **calcuar_macronutrientes**:
 A partir de la cantidad de kcal que el usuario incerte en el argumento de la función, esta devuelve la cantidad en gramo de proteina, grasa y carbohidrato que este usuario debe consumir diario. Para ello se utilizaron los datos a partir de un articulo publicado por la [Dirección General de Salud Pública de Madrid, España](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.comunidad.madrid/sites/default/files/doc/sanidad/1._valor_energetico_saber_mas.pdf&ved=2ahUKEwj3kZS22PORAxWuSTABHQuFO2oQFnoECBwQAw&usg=AOvVaw0c4toutOgq-dTvHpn6qLhp) donde 1 gramo de proteina y carbohidrato aporta 4 kcal y 1 gramo de grasas 9 kcal. Para obtener la cantidad de cada macronutriente se utilizó la siguiente fórmula
@@ -108,7 +115,7 @@ El resultado del de huevo es el promedio del valor de una unidad.
 
 **datos_evolución_precio**
 En esta función se preoaran los datos necesarios para la gráfica de líneas donde muestra la evolución de algunos productos. 
-Returna una lista con todas las fechas registradas de los precios de los productos y otra lista con el precio promedio en los productos. Ambas listas coinciden en la misma posición el precio de los productos con la fecha correspondiente.
+Retorna una lista con todas las fechas registradas de los precios de los productos y otra lista con el precio promedio en los productos. Ambas listas coinciden en la misma posición el precio de los productos con la fecha correspondiente.
 
 
 

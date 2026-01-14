@@ -25,41 +25,45 @@ def costo_promedio_nutr(data_mipyme, productos, valor_nutricional):
     """
     Calcula el costo promedio de 1 g de proteína para cada producto,
 
-    EL argumento "producto" es una lista con los productos para analizar y el "valor nutricional" es el macronutriente que se desea analizar el precio
-
+    EL argumento "producto" es una lista con los productos para analizar y el "valor nutricional" es el macronutriente que se desea analizar el precio. En estas listas coincide la posicion del
+    nombre del producto con su valor nutricional.
 
     """
     salida = {}
 
-    for i, nombre_nutri in enumerate(productos): # El código enumerate lo uso para obtener tanto como el nombre del producto como su posición para luego buscar en el diccionario del valor nutricional el producto correspondiente
-        lista_costos = [] #Esta lista es para calcular el costo promedio, se reinicia los valores en cada iteración
+    for i, nombre_nutri in enumerate(productos): # El código enumerate lo uso para obtener tanto como el nombre del producto como su posición para luego buscar en la lista del valor nutricional del producto correspondiente
+        lista_costos = [] #Esta lista es para calcular el costo promedio, se reinicia los valores cuando en la iteracion cambia de producto
 
         for mipyme in data_mipyme["mipyme"]:
-            for producto in mipyme["productos"]: 
+            for producto in mipyme["productos"]: #productos son diccionarios que contiene los datos de cada producto
 
-                if producto["nombre"] == "huevo": # EL costo del huevo no es por 100 gramos sino por unidad 
+                if producto["nombre"] == "huevo": 
                     precio = float(producto["precio"])# Convertir en float, de lo contrario da error porque se lee como string
-                    gramos = float(producto["cantidad"])
-                    macro_total = valor_nutricional[i] * gramos #EL inidice i es para buscar en el diccionario del valor nutricional el producto correspondiente
+                    cantidad = float(producto["cantidad"])
+                    macro_total = valor_nutricional[i] * cantidad #EL inidice i es para buscar en la lista del valor nutricional el producto correspondiente
+                    # EL valor nutricional del huevo no es por 100 gramos sino por unidad por eso no se divide entre 100
+                    #Ademas el valor nutricional del huevo y la cantidad de huevo en los cartones que hay en las mipymes siempre es la misma. Lo unico que cambia es el precio                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+
 
                     if macro_total > 0: # Evitar división por cero cuando no hay carbohidratos en algunos alimentos
                         costo_por_gramo = precio / macro_total
                         lista_costos.append(costo_por_gramo)
                         
-                        continue #si en la iteración se encuentra el huevo, se salta los demas codigos y salta al siguiente producto de la mipyme
+                        break #si en la iteración se encuentra el huevo, se salta los demas codigos y se busca otra mipyme
 
                 elif producto["nombre"] == nombre_nutri:
                         gramos = float(producto["cantidad"]) 
                         precio = float(producto["precio"])
 
                         macro_total = (valor_nutricional[i] / 100) * gramos
+                        #Como cada producto tiene un peso distinto, el valor nutricional de ese producto es mayor. Por eso se multiplica el valor nutricional por la cantidad del producto dividido entre 100
 
             if macro_total > 0: # Evitar división por cero cuando no hay carbohidratos en algunos alimentos
                     costo_por_gramo = precio / macro_total
                     lista_costos.append(costo_por_gramo)
 
             
-            salida[nombre_nutri] = round(promedio(lista_costos), 2) #La función returna un diccionario llamado "salida" donde cada llave es el nombre del producto y su valor es el precio redondeado
+            salida[nombre_nutri] = round(promedio(lista_costos), 2) #La función retorna un diccionario llamado "salida" donde cada llave es el nombre del producto y su valor es el precio redondeado
 
     return salida
 
