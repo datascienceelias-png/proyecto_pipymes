@@ -2,109 +2,102 @@
   
   "muslo de pollo": {
     "proteina": 20,
-    "kilocalorías": 144,
     "carbohidratos": 0,
     "grasas": 8
   },
   "pechuga de pollo": {
     "proteina": 23,
-    "kilocalorías": 120,
     "carbohidratos": 0,
     "grasas": 3
   },
   "higado de pollo": {
     "proteina": 17,
-    "kilocalorías": 119,
+    
     "carbohidratos":1,
     "grasas": 5
   },
   "picadillo de pollo": {
     "proteina": 16,
-    "kilocalorías": 395,
+    
     "carbohidratos":15,
     "grasas": 6
   },
   "huevo": {
     "proteina": 6,
-    "kilocalorías": 72,
+    
     "carbohidratos": 0,
     "grasas": 5
   },
   "molleja de pollo": {
     "proteina": 18,
-    "kilocalorías": 94,
+    
     "carbohidratos": 0,
     "grasas": 2
   },
   "lomo de cerdo": {
     "proteina": 22,
-    "kilocalorías": 132,
+    
     "carbohidratos": 0,
     "grasas": 4
   },
   "atún": {
     "proteina": 17.5,
-    "kilocalorías": 195,
+    
     "carbohidratos": 0,
     "grasas": 13.89
   },
   "pierna de cerdo": {
     "proteina": 23,
-    "kilocalorías": 232,
+    
     "carbohidratos": 0,
     "grasas": 15
-  },
-  "solmillo de cerdo": {
-    "proteina": 21,
-    "kilocalorías": 109,
-    "carbohidratos": 0,
-    "grasas": 2
+  
   },
   "garbanzos": {
     "proteina": 22,
-    "kilocalorías": 364,
     "carbohidratos": 61,
     "grasas": 4.8
   },
   "frijoles negros": {
     "proteina": 22,
-    "kilocalorías": 341,
     "carbohidratos": 59,
     "grasas": 1
   },
   "frijoles colorados": {
     "proteina": 22.5,
-    "kilocalorías": 333,
+    
     "carbohidratos": 61,
     "grasas": 1
   },
-  "leche de vaca": {
-    "proteina": 3,
-    "kilocalorías": 63,
-    "carbohidratos": 5,
-    "grasas": 4
-  },
+
   "arroz": {
     "proteina": 7,
-    "kilocalorías": 316,
+    
     "carbohidratos":67,
     "grasas": 2
   },
   "codito": {
     "proteina": 15,
-    "kilocalorías": 395,
+    
     "carbohidratos":77,
     "grasas": 2
   },
   "espaguetis": {
     "proteina": 13,
-    "kilocalorías": 395,
     "carbohidratos":76,
     "grasas": 2
-  }
- 
-  
+  },
 
+  "leche en polvo": {
+    "proteina": 8,
+    "carbohidratos": 11,
+    "grasas": 8
+  },
+  "azúcar blanca": {
+    "proteina": 0,
+    "carbohidratos": 15,
+    "grasas": 0
+  }
 
 }
 

@@ -1,5 +1,4 @@
 import json
-productos = ['muslo de pollo', 'pechuga de pollo', 'higado de pollo', 'picadillo de pollo', 'huevo', 'molleja de pollo', 'lomo de cerdo', 'atún', 'pierna de cerdo', 'solmillo de cerdo', 'garbanzos', 'frijoles negros', 'frijoles colorados', 'leche de vaca', 'arroz', 'codito', 'espaguetis']
 
 def cargar_json(ruta_relativa):
     with open(ruta_relativa, "r" , encoding="utf-8") as archivo:
@@ -7,69 +6,55 @@ def cargar_json(ruta_relativa):
     return dato
 
     
+def leche_polvo(precio_leche, precio_azucar): #el precio promedio de una libra
+    kg_leche = precio_leche*2.2 #Obtener el precio promedio de 1kg
+    precio_gramo = kg_leche/1000 #Obtener precio por gramo
+    cuchurada2_leche = 30* precio_gramo # Obtener el precio de obtener 30 gramo de leche en polvo que son para preparar un vaso 
 
-def promedio(lista):
+    kg_azucar = precio_azucar*2.2
+    precio_gramoA = kg_azucar/1000
+    cuchurada1_azucar = 15 * precio_gramoA
+
+    precio_vaso = cuchurada1_azucar + cuchurada2_leche #Obtener el precio total para 1 vaso de leche
+ 
+    bolsa_leche = 1000/16 #Cantiada de vasos de leche de 8onzas que puedes hacer con 1kg de leche en polvo
+    
+
+    #valor_leche = [8, 11, 8] #Valor nutricional de la leche (proteina, carbohidrato, grasas)
+    #valor_azucar = [0,15, 0]
+
+    valor_nutricional = {"Proteina": 8, "Carbohidrato": 26, "Grasas": 8} #Sume la cantidad de carbohidratos de ambos productos
+
+    return precio_vaso, bolsa_leche, valor_nutricional
+
+
+
+def datos_evolución_precios(precios, producto):
     """
-    Calcula el promedio de una lista
+    Calcula el precio promedio mensual de un producto específico a lo largo del tiempo.
+
+    El argumento "precios" es un diccionario donde las claves son meses y los valores son el precio de los productos.
+
+    El argumento "producto" es el nombre del producto para el cual se desea ver la evolución de precios.
+
+    Retorna dos listas: una con las fechas y otra con los precios promedios correspondientes.
     """
-    suma = 0
-    for i in lista:
-        suma += i
-    if len(lista) > 0:
-        return suma / len(lista)
-    return 0
+
+    fechas = []
+    promedio_precio = []
+    
+    for mes in precios.keys(): #iterar sobre cada mes en el diccionario de precios, cada llave principal es un mes
+
+        if producto == "huevo" and producto in precios[mes]: #Verificar si el producto existe en ese mes
+            datos_producto = precios[mes][producto] #Obtener los datos del producto en ese mes
+
+            promedio = (round((datos_producto["min"] + datos_producto["max"]) / 2)) * 30 #multiplicar por 30 para obtener el precio del cartón
+
+            fechas.append(mes) #Agregar el mes y el precio a la lista
+            promedio_precio.append(promedio)
 
 
-
-def costo_promedio_nutr(data_mipyme, productos, valor_nutricional):
-    """
-    Calcula el costo promedio de 1 g de proteína para cada producto,
-
-    EL argumento "producto" es una lista con los productos para analizar y el "valor nutricional" es el macronutriente que se desea analizar el precio. En estas listas coincide la posicion del
-    nombre del producto con su valor nutricional.
-
-    """
-    salida = {}
-
-    for i, nombre_nutri in enumerate(productos): # El código enumerate lo uso para obtener tanto como el nombre del producto como su posición para luego buscar en la lista del valor nutricional del producto correspondiente
-        lista_costos = [] #Esta lista es para calcular el costo promedio, se reinicia los valores cuando en la iteracion cambia de producto
-
-        for mipyme in data_mipyme["mipyme"]:
-            for producto in mipyme["productos"]: #productos son diccionarios que contiene los datos de cada producto
-
-                if producto["nombre"] == "huevo": 
-                    precio = float(producto["precio"])# Convertir en float, de lo contrario da error porque se lee como string
-                    cantidad = float(producto["cantidad"])
-                    macro_total = valor_nutricional[i] * cantidad #EL inidice i es para buscar en la lista del valor nutricional el producto correspondiente
-                    # EL valor nutricional del huevo no es por 100 gramos sino por unidad por eso no se divide entre 100
-                    #Ademas el valor nutricional del huevo y la cantidad de huevo en los cartones que hay en las mipymes siempre es la misma. Lo unico que cambia es el precio                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
-
-
-                    if macro_total > 0: # Evitar división por cero cuando no hay carbohidratos en algunos alimentos
-                        costo_por_gramo = precio / macro_total
-                        lista_costos.append(costo_por_gramo)
-                        
-                        break #si en la iteración se encuentra el huevo, se salta los demas codigos y se busca otra mipyme
-
-                elif producto["nombre"] == nombre_nutri:
-                        gramos = float(producto["cantidad"]) 
-                        precio = float(producto["precio"])
-
-                        macro_total = (valor_nutricional[i] / 100) * gramos
-                        #Como cada producto tiene un peso distinto, el valor nutricional de ese producto es mayor. Por eso se multiplica el valor nutricional por la cantidad del producto dividido entre 100
-
-            if macro_total > 0: # Evitar división por cero cuando no hay carbohidratos en algunos alimentos
-                    costo_por_gramo = precio / macro_total
-                    lista_costos.append(costo_por_gramo)
-
-            
-            salida[nombre_nutri] = round(promedio(lista_costos), 2) #La función retorna un diccionario llamado "salida" donde cada llave es el nombre del producto y su valor es el precio redondeado
-
-    return salida
-
-
-
-
+    return fechas, promedio_precio
 
 def calcular_macronutrientes(kcal):
     """
@@ -80,9 +65,9 @@ def calcular_macronutrientes(kcal):
     proteinas = (10/100 * kcal) / 4
 
     return {
-        "carbohidratos": round(carbohidratos, 2),
-        "grasas": round(grasas, 2),
-        "proteinas": round(proteinas, 2)
+        "carbohidratos": round(carbohidratos),
+        "grasas": round(grasas),
+        "proteinas": round(proteinas)
     }
 
 
@@ -95,8 +80,8 @@ def precio_promedio_lb(listado_de_productos, mipyme):
 
     En caso de las latas de atún como su peso es menor a de una libra, el analisis seria para saber el precio promedio para comprar una lata de atun
 
-
     """
+
 
     output = {}
     for producto in listado_de_productos:
@@ -117,69 +102,70 @@ def precio_promedio_lb(listado_de_productos, mipyme):
                     lista_precio.append(float(products["precio"]))
                     break
 
-                elif producto == "leche de vaca" and products["nombre"] == "leche de vaca":
+                elif producto == "leche en polvo" and products["nombre"] == "leche en polvo":
                     lista_precio.append(float(products["precio"]))
                     break
                     
-                elif products["nombre"] == producto and producto!= "huevo" and producto !="atún" and producto != "leche de vaca":
+                elif products["nombre"] == producto and producto!= "huevo" and producto !="atún" and producto != "leche en polvo":
                     lb = float(products["cantidad"]) / 453.592 #Convertir en float los datos necesrios porque python los reconoce como str
                     precio_lb = float(products["precio"]) / lb
                     lista_precio.append(precio_lb)
                 
                     
-        output[producto] = round(promedio(lista_precio), 2)    
-
-
+        output[producto] = round(sum(lista_precio) / len(lista_precio))    
 
         
-
     return output
 
-def datos_evolución_precios(precios, producto):
+
+
+
+def costo_promedio_nutr(data_mipyme, productos, valor_nutricional):
     """
-    Calcula el precio promedio mensual de un producto específico a lo largo del tiempo.
+    Calcula el costo promedio de 1 g de proteína para cada producto,
 
-    El argumento "precios" es un diccionario donde las claves son meses y los valores son el precio de los productos.
+    EL argumento "producto" es una lista con los productos para analizar y el "valor nutricional" es el macronutriente que se desea analizar el precio. En estas listas coincide la posicion del
+    nombre del producto con su valor nutricional.
 
-    El argumento "producto" es el nombre del producto para el cual se desea ver la evolución de precios.
-
-    Retorna dos listas: una con las fechas y otra con los precios promedios correspondientes.
     """
+    salida = {}
 
-    fechas = []
-    promedio_precio = []
-    for mes in precios.keys(): #Iterar por cada mes 
-        fechas.append(mes) # las llaves del diccionario son las fechas
+    for i, nombre_nutri in enumerate(productos): # El código enumerate lo uso para obtener tanto como el nombre del producto como su posición para luego buscar en la lista del valor nutricional del producto correspondiente
+        lista_costos = [] #Esta lista es para calcular el costo promedio, se reinicia los valores cuando en la iteracion cambia de producto
 
-         #los datos del precio del huevo son por unidad, por eso se multiplica por 30 para obtener el precio del cartón
-        if producto == "huevo" and producto in precios[mes]: #acceder al producto en ese mes
-            datos_producto = precios[mes][producto]
-            promedio = (round((datos_producto["min"] + datos_producto["max"]) / 2)) * 30
-            promedio_precio.append(promedio)
-            continue
+        for mipyme in data_mipyme["mipyme"]:
+            for producto in mipyme["productos"]: #productos son diccionarios que contiene los datos de cada producto
+
+                if producto["nombre"] == "huevo": 
+                    precio = producto["precio"]
+                    cantidad = producto["cantidad"]
+                    macro_total = valor_nutricional[i] * cantidad #EL indice i es para buscar en la lista del valor nutricional el producto correspondiente
+                    # EL valor nutricional del huevo no es por 100 gramos sino por unidad por eso no se divide entre 100
+                    #Además el valor nutricional del huevo y la cantidad de huevo en los cartones que hay en las mipymes siempre es la misma. Lo único que cambia es el precio                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+
+
+                    if macro_total > 0: # Evitar división por cero cuando no hay proteina, grasa o carbohidrato en algunos alimentos
+                        costo_por_gramo = precio / macro_total
+                        lista_costos.append(costo_por_gramo)
+                        
+                        break #si en la iteración se encuentra el huevo, se salta los demas cádigos y se busca otra mipyme
+
+                elif producto["nombre"] == nombre_nutri:
+                        gramos = producto["cantidad"] 
+                        precio = producto["precio"]
+
+                        macro_total = (valor_nutricional[i] / 100) * gramos
+                        #Como cada producto tiene un peso distinto, el valor nutricional de ese producto es mayor. Por eso se multiplica el valor nutricional por la cantidad del producto dividido entre 100
+
+            if macro_total > 0: # Evitar división por cero cuando no hay carbohidratos en algunos alimentos
+                    costo_por_gramo = precio / macro_total
+                    lista_costos.append(costo_por_gramo)
+
+        if len(lista_costos) > 0: # Verificar que la lista no esté vacía para evitar división por cero
+            salida[nombre_nutri] = round(sum(lista_costos) / len(lista_costos), 2)#La función retorna un diccionario llamado "salida" donde cada llave es el nombre del producto y su valor es el precio redondeado
+        else: salida[nombre_nutri] = 0.0 #En caso de que la lista esté vacía, asignar un valor de 0.0 para evitar errores
+
+    return salida
+        
+
             
-        elif producto in precios[mes]: #buscar en cada iteración el producto del argumento para luego calcular su promedio
-            datos_producto = precios[mes][producto]
-            promedio = round((datos_producto["min"] + datos_producto["max"]) / 2) # Calcular el promedio
-            promedio_precio.append(promedio)
-            
-
-
-
-    return fechas, promedio_precio
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-
- 

@@ -1,5 +1,30 @@
 import matplotlib.pyplot as plt
 
+def evolución_precios(precio, fecha):
+    x = fecha
+    y = precio
+
+    plt.figure(figsize=(10, 6))
+    plt.plot(x,y, marker = ".",linestyle='-', color = "b", label = "Evolución de los precios")
+    
+
+    plt.xticks(rotation=45, ha='right') #rotar las etiquetes del eje x  
+
+    plt.tight_layout() # para mejorarla visualizacion en el notbook
+
+    plt.title("Evolución del precio",fontweight="bold", fontsize=16)
+
+    plt.xlabel("Fechas", fontweight="bold", fontsize=12)
+
+    plt.ylabel("Precios", fontweight="bold", fontsize=13)
+
+    plt.grid(True, alpha=0.3) #Activar las cuadrículas para mejor visualización
+    #"alpha es para la intensidad que se quiere visualizar las cuadriculas"
+    
+    plt.show()
+
+
+
 
 def proporción_macronutrientes(
     proporcion=[75, 15, 10],
@@ -8,9 +33,13 @@ def proporción_macronutrientes(
 ):
     colores = ["#1F74B1", "#F38D30", "#CC243C"]
     explode = [0, 0, 0.1 ]
+
     plt.figure(figsize=(12, 7))
+
     plt.pie(proporcion, labels=macronutrientes, autopct='%1.1f%%', startangle = 60, explode=explode, colors=colores)
-    plt.title('Proporción de Macronutrientes', fontsize=16, fontweight='bold')
+
+    plt.title('Proporción de Macronutrientes', fontsize=16,fontweight='bold')
+
     plt.legend()
 
    
@@ -18,16 +47,27 @@ def proporción_macronutrientes(
     plt.show()
 
 
+
+
 def barra_costo_promedio(productos, precio):
+
     plt.figure(figsize=(10, 6))
-    plt.barh(productos,precio, color="#1F74B1")
+
+    plt.barh(productos, precio, color="#1F74B1")
+
     plt.title("Precio promedio de cada producto",fontweight='bold', fontsize=16)
+
+
     plt.xlabel("Precios",fontweight='bold', fontsize=12)
+
     plt.ylabel("Productos",fontweight='bold',  fontsize=12)
 
     
-    
+
     plt.show()
+
+
+
 
 def barra_apilada(producto, carbohidratos, proteínas, grasa):
     x = producto      #Nombre de los productos
@@ -38,9 +78,10 @@ def barra_apilada(producto, carbohidratos, proteínas, grasa):
 
     
     fig, ax = plt.subplots(figsize=(10, 6))
+
     #1era capa de la barra
     bar1 = ax.bar(x, y1, color="#D8334C",label="Proteínas") 
-    ax.bar_label(bar1, labels=y1, label_type="center")
+    ax.bar_label(bar1, labels=y1, label_type="center") #"ax.bar_label" anaidir valores numericos a las barras
 
      #2da capa
     bar2 = ax.bar(x, y2, bottom=y1, color="#F38D30", label="Grasas")
@@ -53,7 +94,9 @@ def barra_apilada(producto, carbohidratos, proteínas, grasa):
     ax.bar_label(bar3, labels=y3, label_type="edge")
 
     plt.xticks(rotation=45, ha='right') #Rotación
-    ax.legend(loc="upper right") #Leyenda
+
+    ax.legend() #Leyenda 
+    
     fig.tight_layout() 
 
     #Títulos y Etiquetas:
@@ -62,25 +105,9 @@ def barra_apilada(producto, carbohidratos, proteínas, grasa):
     ax.set_ylabel("Precios",fontweight='bold',  fontsize=12)
 
 
-
     plt.show()
 
-def evolución_precios(precio, fecha):
-    x = fecha
-    y = precio
 
-    plt.figure(figsize=(10, 6))
-    plt.plot(x,y, marker = ".",linestyle='-', color = "b", label = "Evolución de los precios" )
-    
-
-    plt.xticks(rotation=45, ha='right')
-    plt.tight_layout()
-    plt.title("Evolución del precio",fontweight="bold", fontsize=16)
-    plt.xlabel("Fechas", fontweight="bold", fontsize=12)
-    plt.ylabel("Precios", fontweight="bold", fontsize=13)
-    plt.grid(True, alpha=0.3) #Activar las cuadrículas para mejor visualización
-    
-    plt.show()
 
 
 def comparación(frijoles_negros, muslo_pollo):
