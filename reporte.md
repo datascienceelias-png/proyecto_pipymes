@@ -34,7 +34,7 @@ Estos son frecuentes en las mipymes y pertenecen a grupos que la [OMS](https://w
 
 La base de datos utilizada estan guardadas en un archivo .json
 
-El archivo **valor_nutricional*** contiene los datos nutricionales principales (grasas, proteínas y carbohidratos) para cada producto. Por general, estos valores corresponden a una porción de 100 gramos del alimento en crudo. Las excepciones son: el huevo, cuyos datos se obtuvieron por unidad; el atún, por los nutrientes de una lata; el muslo de pollo, considerando solo la carne sin hueso; la leche en polvo, cuyo valor se basa en la porción equivalente a 2 cucharadas (16 gramos) necesaria para preparar un vaso de 8 onzas y la azucar es el valor nutricional de 1 cucharada (15 gramos).
+El archivo **valor_nutricional*** contiene los datos nutricionales principales (grasas, proteínas y carbohidratos) para cada producto. Por general, estos valores corresponden a una porción de 100 gramos del alimento en crudo. Las excepciones son: el huevo, cuyos datos se obtuvieron por unidad; el atún, por los nutrientes de una lata; el muslo de pollo, considerando solo la carne sin hueso; la leche en polvo, cuya cantidad de 30 gramos (equivalente a 2 cucharadas con una pequena loma) necesaria para preparar un vaso de 8 onzas o 240 ml y la azucar es el valor nutricional de 1 cucharada (15 gramos).
 
 Cada llave del json es el nombre del producto, las claves son los macronutrientes y los valores correspondiente la cantidad en gramo
 Se tomaron los datos a partir de las etiquetas de los productos y también por la aplicación [Fitia](https://fitia.app/es/). 
@@ -68,6 +68,57 @@ productos es una lista que contiene diccionarios, cada diccionario es un product
 `precio`: es el costo en cup del producto
 
 Los datos fueron obtenidos desde finales de noviembre y principios de diciembre del 2025.
+
+### Funciones programadas utilizadas en el Análisis 
+
+La función **costo_promedio_nutr** fue creada para conocer el precio de obtener 1 gramo del macronutriente que el usuario desea analizar. Además revela cuales los alimentos más económicos con mayor cantidad del macronutriente. La funcón se basa en las siguiente formula:
+
+*cantidad total de macronutriente = (valor nutricional del producto /100) * Cantidad total en gramos del producto*
+
+Explicación: La divición entre el valor nutricional y 100 es para conocer la proporción del macronutriente. Significa que cada gramo del producto tiene X gramos del macronutriente seleccionado. Al multiplicarlo por la cantidad total en gramos del producto devuelve el total en gramos del macronutriente.
+ejemplo si el frijol negro tiene 22g de proteina entonces 22/100 = 0,22g de proteina aporta 1 gramo de frijoles y si peso del producto es de 500g, 
+0,22*500 = 110g de proteina total
+
+*costo por gramo = precio / cantidad total de macronutriente*
+
+Explicación: Se divide el precio del producto entre la cantidad total de macronutriente que contiene, y devuelve el costo para obtener 1 gramo de ese macronutriente. Por ejemplos si el precio del frijol es de 700cup, 700/110g = 6.36cup el costo de 1 gramo de proteina.
+
+A diferencia de otros alimentos donde el peso varía y determina la cantidad total de nutrientes, el huevo se vende en un formato estándar por unidades. Debido a esta cantidad fija, se omite la división entre 100 (que busca la proporción por gramo) y se procede a multiplicar directamente el valor nutricional de un huevo por el número de unidades en el cartón para obtener el total del macronutriente.
+
+En cada iteración, se busca el producto correspondiente en todas las MiPYMEs disponibles. Por cada coincidencia encontrada, se calcula el costo de obtener un gramo del macronutriente seleccionado y se añade a una lista. Una vez finalizada la búsqueda en todos los establecimientos, se calcula el promedio de los costos almacenados, se redondea el valor y se devuelve como el resultado final esperado.
+
+
+**calcuar_macronutrientes**:
+A partir de la cantidad de kcal que el usuario incerte en el argumento de la función, esta devuelve la cantidad en gramo de proteina, grasa y carbohidrato que este usuario debe consumir diario. Para ello se utilizaron los datos a partir de un articulo publicado por la [Dirección General de Salud Pública de Madrid, España](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.comunidad.madrid/sites/default/files/doc/sanidad/1._valor_energetico_saber_mas.pdf&ved=2ahUKEwj3kZS22PORAxWuSTABHQuFO2oQFnoECBwQAw&usg=AOvVaw0c4toutOgq-dTvHpn6qLhp) donde 1 gramo de proteina y carbohidrato aporta 4 kcal y 1 gramo de grasas 9 kcal. Para obtener la cantidad de cada macronutriente se utilizó la siguiente fórmula
+
+cantidad_macronutriente =(PM/100 * kcal) / A
+
+-PM es la proporción en % del macronutriente que se necesita 
+-Kcal es la cantidad de kilocalorías que el usurio debe consumir diario
+-A es la cantidad de kcal que aporta el macronutriente que se necesita
+
+
+La función **precio_promedio_lb** tiene como objetivo calcular el precio promedio que una persona debe gastar en comprar 1 libra de cada producto. Pero el peso escurrido de las diferentes latas de atún de todas las mipymes nunca llega a 1 libra, por eso el análisis se basa en el precio promedio para comprar 1 lata. El resultado del de huevo es el promedio del valor de una unidad.
+
+**datos_evolución_precio**
+En esta función se preparan los datos necesarios para la gráfica de líneas donde muestra la evolución de los precios del huevo 
+Retorna una lista con todas las fechas registradas de los precios de los productos y otra lista con el precio promedio en los productos. Ambas listas coinciden en la misma posición el precio de los productos con la fecha correspondiente.
+
+# Análisis:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
