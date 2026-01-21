@@ -1,12 +1,59 @@
 import json
 
+
 def cargar_json(ruta_relativa):
     with open(ruta_relativa, "r" , encoding="utf-8") as archivo:
         dato = json.load(archivo)
     return dato
 
+
+
+def frutas(platano=129, fruta_bomba=150, guayaba=200):
+    """
+    Docstring for vegetales_verduras
     
-def leche_polvo(precio_leche, precio_azucar): #el precio promedio de una libra
+    :param platano: El precio de 1 libra 
+    :param fruta_bomba: Precio de 1 libra
+    :param guayaba: Precio de 1 libra
+    """
+    p = platano * 10 
+    f = fruta_bomba * 10
+    g = guayaba * 10
+
+    costo_mensual = p+f+g
+    
+    return p,f,g,costo_mensual
+
+
+
+def verduras(r=500, p=500, col=600, t=600, z=500):
+    gramoR = r / 453
+    r_100 = 100 * gramoR
+    
+    gramoP = p / 453  
+    p_100 = 100 * gramoP
+    
+    gramoCol = col / 453
+    col_100 = 100 * gramoCol
+    
+    gramoT = t / 453
+    t_100 = 100 * gramoT
+    
+    gramoZ = z / 453
+    z_100 = 100 * gramoZ
+    
+    
+    return r_100, p_100, col_100, t_100, z_100
+
+
+
+def leche_polvo(precio_leche, precio_azucar):
+    """
+    Docstring for leche_polvo
+    
+    :param precio_leche: Precio promedio de 1 libra
+    :param precio_azucar: Precio promedio de 1 libra
+    """ 
     kg_leche = precio_leche*2.2 #Obtener el precio promedio de 1kg
     precio_gramo = kg_leche/1000 #Obtener precio por gramo
     cuchurada2_leche = 30* precio_gramo # Obtener el precio de obtener 30 gramo de leche en polvo que son para preparar un vaso 
@@ -56,6 +103,8 @@ def datos_evolución_precios(precios, producto):
 
     return fechas, promedio_precio
 
+
+
 def calcular_macronutrientes(kcal):
     """
     Calcula la cantidad de macronutrientes en gramos según las calorías necesarias.
@@ -69,6 +118,8 @@ def calcular_macronutrientes(kcal):
         "grasas": round(grasas),
         "proteinas": round(proteinas)
     }
+
+
 
 
 def precio_promedio_lb(listado_de_productos, mipyme):
@@ -168,4 +219,3 @@ def costo_promedio_nutr(data_mipyme, productos, valor_nutricional):
     return salida
         
 
-            

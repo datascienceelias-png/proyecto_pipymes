@@ -1,0 +1,56 @@
+{
+    "frutas": [  
+        {
+            "nombre": "fruta bomba",
+            "unit": "g",
+            "cantidad": 453.592,
+            "precio": 150
+        },
+        {
+            "nombre": "guayaba",
+            "unit": "g",
+            "cantidad": 453.592,
+            "precio": 200
+        },
+        {
+            "nombre": "platano fruta",
+            "unit": "g",
+            "cantidad": 453.592,
+            "precio": 129
+        }
+    ],  
+    
+    "verduras": [  
+        { 
+        "nombre": "remolacha",
+            "unit": "g",
+            "cantidad": 453.592,
+            "precio": 500
+        
+       
+        },
+         {    "nombre": "pepino",
+            "unit": "g",
+            "cantidad": 453.592,
+            "precio": 500
+        },
+        {
+            "nombre": "col",
+            "unit": "g",
+            "cantidad": 453.592,
+            "precio": 600
+        },
+        {
+            "nombre": "tomate",
+            "unit": "g",
+            "cantidad": 453.592,
+            "precio": 600
+        },
+        {
+            "nombre": "zanahoria",
+            "unit": "g",
+            "cantidad": 453.592,
+            "precio": 500
+        }
+    ]  
+}
