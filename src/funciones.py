@@ -56,7 +56,7 @@ def leche_polvo(precio_leche, precio_azucar):
     """ 
     kg_leche = precio_leche*2.2 #Obtener el precio promedio de 1kg
     precio_gramo = kg_leche/1000 #Obtener precio por gramo
-    cuchurada2_leche = 30* precio_gramo # Obtener el precio de obtener 30 gramo de leche en polvo que son para preparar un vaso 
+    cuchurada2_leche = 40* precio_gramo # Obtener el precio de obtener 40 gramo de leche en polvo que son para preparar un vaso 
 
     kg_azucar = precio_azucar*2.2
     precio_gramoA = kg_azucar/1000
@@ -64,13 +64,13 @@ def leche_polvo(precio_leche, precio_azucar):
 
     precio_vaso = cuchurada1_azucar + cuchurada2_leche #Obtener el precio total para 1 vaso de leche
  
-    bolsa_leche = 1000/16 #Cantiada de vasos de leche de 8onzas que puedes hacer con 1kg de leche en polvo
+    bolsa_leche = 1000/40 #Cantiada de vasos de leche de 8onzas que puedes hacer con 1kg de leche en polvo
     
 
     #valor_leche = [8, 11, 8] #Valor nutricional de la leche (proteina, carbohidrato, grasas)
     #valor_azucar = [0,15, 0]
 
-    valor_nutricional = {"Proteina": 8, "Carbohidrato": 26, "Grasas": 8} #Sume la cantidad de carbohidratos de ambos productos
+    valor_nutricional = {"Proteina": 10, "Carbohidrato": 30, "Grasas": 10} #Sume la cantidad de carbohidratos de ambos productos
 
     return precio_vaso, bolsa_leche, valor_nutricional
 

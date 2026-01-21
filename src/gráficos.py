@@ -6,13 +6,14 @@ def evolución_precios(precio, fecha):
 
     plt.figure(figsize=(10, 6))
     plt.plot(x,y, marker = ".",linestyle='-', color = "b", label = "Evolución de los precios")
+    plt.axhline(3547, color='r', linestyle='--', label= "55% del salario promedio")
     
 
     plt.xticks(rotation=45, ha='right') #rotar las etiquetes del eje x  
 
     plt.tight_layout() # para mejorarla visualizacion en el notbook
 
-    plt.title("Evolución del precio",fontweight="bold", fontsize=16)
+    plt.title("Evolución del precio del huevo",fontweight="bold", fontsize=16)
 
     plt.xlabel("Fechas", fontweight="bold", fontsize=12)
 
@@ -20,6 +21,8 @@ def evolución_precios(precio, fecha):
 
     plt.grid(True, alpha=0.3) #Activar las cuadrículas para mejor visualización
     #"alpha es para la intensidad que se quiere visualizar las cuadriculas"
+
+    plt.legend(loc='upper right')
     
     plt.show()
 
@@ -95,7 +98,7 @@ def barra_apilada(producto, carbohidratos, proteínas, grasa):
 
     plt.xticks(rotation=45, ha='right') #Rotación
 
-    ax.legend() #Leyenda 
+    ax.legend(loc = "best") #Leyenda 
     
     fig.tight_layout() 
 
