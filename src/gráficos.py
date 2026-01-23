@@ -13,7 +13,7 @@ def evolución_precios(precio, fecha):
 
     plt.tight_layout() # para mejorarla visualizacion en el notbook
 
-    plt.title("Evolución del precio del huevo",fontweight="bold", fontsize=16)
+    plt.title("Evolución del precio del carton de huevo",fontweight="bold", fontsize=16)
 
     plt.xlabel("Fechas", fontweight="bold", fontsize=12)
 
@@ -34,7 +34,7 @@ def proporción_macronutrientes(
     macronutrientes=['Carbohidratos', 'Grasas', 'Proteínas']
    
 ):
-    colores = ["#1F74B1", "#F38D30", "#CC243C"]
+    colores = ["#3498db", "#F38D30", "#e74c3c"]
     explode = [0, 0, 0.1 ]
 
     plt.figure(figsize=(12, 7))
@@ -56,7 +56,7 @@ def barra_costo_promedio(productos, precio):
 
     plt.figure(figsize=(10, 6))
 
-    plt.barh(productos, precio, color="#1F74B1")
+    plt.barh(productos, precio, color="#3498db")
 
     plt.title("Precio promedio de cada producto",fontweight='bold', fontsize=16)
 
@@ -92,7 +92,7 @@ def barra_apilada(producto, carbohidratos, proteínas, grasa):
 
     #3ra capa: Sumar las 2 capas anteriores para formar la capa faltante
     super_bottom = [p + g for p,g in zip(y1,y2)]
-    bar3 = ax.bar(x, y3, bottom=super_bottom, color="#1F74B1", label="Carbohidratos")
+    bar3 = ax.bar(x, y3, bottom=super_bottom, color="#3498db", label="Carbohidratos")
 
     ax.bar_label(bar3, labels=y3, label_type="edge")
 
@@ -113,23 +113,46 @@ def barra_apilada(producto, carbohidratos, proteínas, grasa):
 
 
 
-def comparación(frijoles_negros, muslo_pollo):
-        x = ["Salario", "Frijoles Negros", "Muslo de Pollo"]
-        y = [6449, frijoles_negros, muslo_pollo]
-
-
-        plt.figure(figsize=(10, 6))
-
-        barras = plt.bar(x, y, color="#1F74B1")
-
-        plt.bar_label(barras)
-
-        plt.title("Comparación entre el salario promedio y el costo para consumir las proteinas", fontweight='bold', fontsize=16)
-        plt.ylabel("Precio", fontweight='bold', fontsize=14)
+def comparación(frutas, verduras):
+    salario_promedio = 6449
     
+    eje_x = ["Salario promedio", "Frutas", "Verduras"]
+    porcentajes_eje_y = []
 
-        plt.show()
+    valores = [salario_promedio, frutas, verduras]
 
+    for i in valores: #Para obtener el porcetaje de los precios de las frutas respecto al salario promedio
+        x = (i/salario_promedio) * 100
+        porcentajes_eje_y.append(x)
+
+    color = ['#3498db', '#2ecc71', '#e74c3c']  
+              
+
+    plt.figure(figsize=(10,6))
+
+    plt.bar(eje_x, porcentajes_eje_y, color = color)
+    plt.title("Porcentaje del precio de frutas y verduras respecto al salario", fontsize=17,fontweight="bold")
+    plt.ylabel("Porcentaje (%)", fontsize=14, fontweight="bold")
+
+    plt.ylim(0,150) # Esto permite mostrara valores que superen en 100%. Lo utilizo para el caso de las verduras ya que sobrepasa el salario promedio
+
+    plt.axhline(y=100, color = "b", linestyle ="--") #Esto crea una linea horizontal en el valor de 100%, coincide con el salario promedio
+
+    #Mostrar el % arriba de los graficos
+    for i in range(3): #Utilizo range(3) xq tengo 3 graficos para escribir arriba sus valores correspondientes
+        #en esta parte hay 3 elementos que necesito, las cordenadas donde se encuentra la barra y el texto que quiero mostrar
+        plt.text(i,porcentajes_eje_y[i], f"{porcentajes_eje_y[i]:.2f}%", ha="center", va="bottom") 
+
+    plt.tight_layout() 
+    plt.legend()
+    plt.show()
+
+
+
+
+
+
+        
 
 
 

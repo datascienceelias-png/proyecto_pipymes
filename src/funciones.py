@@ -1,4 +1,5 @@
-import json
+import json 
+
 
 
 def cargar_json(ruta_relativa):
@@ -16,34 +17,41 @@ def frutas(platano=129, fruta_bomba=150, guayaba=200):
     :param fruta_bomba: Precio de 1 libra
     :param guayaba: Precio de 1 libra
     """
-    p = platano * 10 
+    p = platano * 10 # Obtener el costo de consumir 
     f = fruta_bomba * 10
     g = guayaba * 10
 
     costo_mensual = p+f+g
+
     
     return p,f,g,costo_mensual
 
 
 
-def verduras(r=500, p=500, col=600, t=600, z=500):
-    gramoR = r / 453
+def verduras(r=500, p=500, t=600, z=500):
+    '''
+    Docstring for verduras
+    
+    :param r: precio x lb de la remolacha
+    :param p: precio x lb del pepino
+    :param t: precio x lb del tomate
+    :param z: precio x lb de la zanahoria
+    '''
+    gramoR = r / 453.592
     r_100 = 100 * gramoR
     
-    gramoP = p / 453  
+    gramoP = p / 453.592 
     p_100 = 100 * gramoP
     
-    gramoCol = col / 453
-    col_100 = 100 * gramoCol
-    
-    gramoT = t / 453
+    gramoT = t / 453.592
     t_100 = 100 * gramoT
     
-    gramoZ = z / 453
+    gramoZ = z / 453.592
     z_100 = 100 * gramoZ
     
-    
-    return r_100, p_100, col_100, t_100, z_100
+
+
+    return r_100, p_100,  t_100, z_100
 
 
 
