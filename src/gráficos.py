@@ -22,7 +22,7 @@ def evolución_precios(precio, fecha):
     plt.grid(True, alpha=0.3) #Activar las cuadrículas para mejor visualización
     #"alpha es para la intensidad que se quiere visualizar las cuadriculas"
 
-    plt.legend(loc='upper right')
+    plt.legend()
     
     plt.show()
 
@@ -58,7 +58,7 @@ def barra_costo_promedio(productos, precio):
 
     plt.barh(productos, precio, color="#3498db")
 
-    plt.title("Precio promedio de cada producto",fontweight='bold', fontsize=16)
+    plt.title("Precio promedio de los carnicos",fontweight='bold', fontsize=16)
 
 
     plt.xlabel("Precios",fontweight='bold', fontsize=12)
@@ -83,7 +83,7 @@ def barra_apilada(producto, carbohidratos, proteínas, grasa):
     fig, ax = plt.subplots(figsize=(10, 6))
 
     #1era capa de la barra
-    bar1 = ax.bar(x, y1, color="#D8334C",label="Proteínas") 
+    bar1 = ax.bar(x, y1, color="#e74c3c",label="Proteínas") 
     ax.bar_label(bar1, labels=y1, label_type="center") #"ax.bar_label" anaidir valores numericos a las barras
 
      #2da capa
@@ -96,7 +96,7 @@ def barra_apilada(producto, carbohidratos, proteínas, grasa):
 
     ax.bar_label(bar3, labels=y3, label_type="edge")
 
-    plt.xticks(rotation=45, ha='right') #Rotación
+    plt.xticks(rotation=35, ha='right') #Rotación
 
     ax.legend(loc = "best") #Leyenda 
     
@@ -144,7 +144,7 @@ def comparación(frutas, verduras):
         plt.text(i,porcentajes_eje_y[i], f"{porcentajes_eje_y[i]:.2f}%", ha="center", va="bottom") 
 
     plt.tight_layout() 
-    plt.legend()
+    
     plt.show()
 
 

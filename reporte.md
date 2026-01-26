@@ -40,7 +40,7 @@ La llave `mipyme` es la principal del json y contiene una lista con varios dicci
 
 `ubicación`: tiene como valor una serie de números que es la ubibación en el mapa de Google maps para poder encontrar la mipyme,
 
-productos es una lista que contiene diccionarios, cada diccionario es un producto diferente. En estos diccionarios hay como llave:
+`productos`:  es una lista que contiene diccionarios, cada diccionario es un producto diferente. En estos diccionarios hay como llave:
 
 `nombre`: para registrar el nombre del producto,
 
@@ -53,14 +53,12 @@ productos es una lista que contiene diccionarios, cada diccionario es un product
 Los datos fueron obtenidos desde finales de noviembre y principios de diciembre del 2025.
 
 
-Tambien se analizaron entre frutas y verduras 8 diferente y se guardaron en el archivo ***frutas_verduras.json***:
+Tambien se analizaron entre frutas y verduras 6 diferente y se guardaron en el archivo ***frutas_verduras.json***:
 
 - Fruta bomba
 - Guayaba
 - Platano fruta
-- Lechuga
 - Pepino
-- Col
 - Tomate
 - Zanahoria
 
@@ -76,13 +74,13 @@ Estos alimentos frecuentes en el mercado cubano y pertenecen a los grupos que la
 
 La base de datos utilizada estan guardadas en un archivo .json
 
-El archivo **valor_nutricional*** contiene los datos nutricionales principales (grasas, proteínas y carbohidratos) para cada producto. Por general, estos valores corresponden a una porción de 100 gramos del alimento en crudo. Las excepciones son: el huevo, cuyos datos se obtuvieron por unidad; el atún, por los nutrientes de una lata; el muslo de pollo, considerando solo la carne sin hueso; la leche en polvo, cuya cantidad de 40 gramos (equivalente a 2 cucharadas con una pequena loma) necesaria para preparar un vaso de 8 onzas o 240 ml y la azucar es el valor nutricional de 1 cucharada (15 gramos).
+El archivo ***valor_nutricional.json*** contiene los datos nutricionales principales (grasas, proteínas y carbohidratos) para cada producto. Por general, estos valores corresponden a una porción de 100 gramos del alimento en crudo. Las excepciones son: el huevo, cuyos datos se obtuvieron por unidad; el atún, por los nutrientes de una lata; el muslo de pollo, considerando solo la carne sin hueso; la leche en polvo, cuya cantidad de 40 gramos (equivalente a 2 cucharadas con una pequena loma) necesaria para preparar un vaso de 8 onzas o 240 ml y la azucar es el valor nutricional de 1 cucharada (15 gramos).
 
 Cada llave del json es el nombre del producto, las claves son los macronutrientes y los valores correspondiente la cantidad en gramo
 Se tomaron los datos a partir de las etiquetas de los productos y también por la aplicación [Fitia](https://fitia.app/es/). 
 
 
-Los datos de la ***evoluvión del precio*** en cada llave principal está la fecha donde se registró el precio de los productos y contiene otra llave para asociar el nombre del producto que se va a guarda. Los productos guardados en este archivo son: arroz, huevo, lomo de cerdo, pierna de cerdo, frijoles negros y frijoles colorados. 
+Los datos de la ***evoluvión_precios.json*** en cada llave principal está la fecha donde se registró el precio de los productos y contiene otra llave para asociar el nombre del producto que se va a guarda. Los productos guardados en este archivo son: arroz, huevo, lomo de cerdo, pierna de cerdo, frijoles negros y frijoles colorados. 
 
 La clave `unit` es la unidad de peso del producto que son *lb* para referirse a 1 libra del producto y *unidad* para asociar solamente a 1 huevo. 
 
