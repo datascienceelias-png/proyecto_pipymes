@@ -6,14 +6,14 @@ def evolución_precios(precio, fecha):
 
     plt.figure(figsize=(10, 6))
     plt.plot(x,y, marker = ".",linestyle='-', color = "b", label = "Evolución de los precios")
-    plt.axhline(3547, color='r', linestyle='--', label= "55% del salario promedio")
+    plt.axhline(6449, color='r', linestyle='--', label= "Evolución del salario promedio")
     
 
     plt.xticks(rotation=45, ha='right') #rotar las etiquetes del eje x  
 
     plt.tight_layout() # para mejorarla visualizacion en el notbook
 
-    plt.title("Evolución del precio del carton de huevo",fontweight="bold", fontsize=16)
+    plt.title("Evolución del precio del cartón de huevo y el salario promedio",fontweight="bold", fontsize=16)
 
     plt.xlabel("Fechas", fontweight="bold", fontsize=12)
 

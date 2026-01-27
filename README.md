@@ -12,4 +12,4 @@
 *reporte.pdf* se encuentra explicado la estrucuta de los datos  como se llevó a cabo el proyecto
 
 En la carpeta *data* está la base de datos utilizada y en *src* está la biblioteca con las *funciones* programadas utilizadas y el código de los *gráficos*. 
-En la carpeta *Evidencias* estan alguas fotos de las mipymes
+En la carpeta *Evidencias* estan alguas fotos de las mipymes. 
