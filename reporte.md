@@ -134,6 +134,9 @@ A diferencia de otros alimentos donde el peso varía y determina la cantidad tot
 
 En cada iteración, se busca el producto correspondiente en todas las MiPYMEs disponibles. Por cada coincidencia encontrada, se calcula el costo de obtener un gramo del macronutriente seleccionado y se añade a una lista. Una vez finalizada la búsqueda en todos los establecimientos, se calcula el promedio de los costos almacenados, se redondea el valor y se devuelve como el resultado final esperado.
 
+El gráfico donde se muestran estos datos es *barra_apilada* y muestra el costo promedio, en CUP, de obtener 1 gramo de cada macronutriente (proteínas, grasas y carbohidratos) a partir de cada producto analizado. Para cada producto, la altura de cada segmento de la barra apilada representa el precio promedio por gramo de ese macronutriente. Por lo tanto, mientras más alta es la barra asociada a un macronutriente en un producto, más costoso resulta obtener 1 gramo de ese macronutriente a partir de dicho producto. En consecuencia, para cubrir las necesidades diarias de macronutrientes, los productos con barras más altas implican un mayor gasto económico.
+Además, es posible comparar directamente los precios por gramo de un mismo macronutriente entre diferentes productos: observando todos los segmentos de proteína (del mismo color) en todos los productos, se puede identificar cuál producto ofrece la proteína más barata por gramo. De igual manera, comparando los segmentos de grasas entre todos los productos se identifica cuál es la fuente más económica de grasas, y así sucesivamente con los carbohidratos. Si una barra no tiene el color asociado a un macronutrientes significa que ese producto no contiene ese tipo de nutriente
+
 
 
 

@@ -147,23 +147,23 @@ def precio_promedio_lb(listado_de_productos, mipyme):
                 #print(products)
         
                 if producto == "huevo" and products["nombre"] == "huevo":
-                    precio_unidad = round((products["precio"]))/ 30 # El cartón de huevo siempre tiene 30 unidades
+                    precio_unidad = round((float(products["precio"])))/ 30 # El cartón de huevo siempre tiene 30 unidades
                     
-                    lista_precio.append(precio_unidad) 
+                    lista_precio.append(float(precio_unidad))
                     break
 
 
                 elif producto == "atún" and products["nombre"] == "atún":  
-                    lista_precio.append(products["precio"])
+                    lista_precio.append(float((products["precio"])))
                     break
 
                 elif producto == "leche en polvo" and products["nombre"] == "leche en polvo":
-                    lista_precio.append(products["precio"])
+                    lista_precio.append(float(products["precio"]))
                     break
                     
                 elif products["nombre"] == producto and producto!= "huevo" and producto !="atún" and producto != "leche en polvo":
-                    lb = (products["cantidad"]) / 453.592 #Convertir en float los datos necesrios porque python los reconoce como str
-                    precio_lb = (products["precio"]) / lb
+                    lb = (float(products["cantidad"])) / 453.592 #Convertir en float los datos necesrios porque python los reconoce como str
+                    precio_lb = float(products["precio"]) / lb
                     lista_precio.append(precio_lb)
                 
                     

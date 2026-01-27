@@ -58,7 +58,7 @@ def barra_costo_promedio(productos, precio):
 
     plt.barh(productos, precio, color="#3498db")
 
-    plt.title("Precio promedio de los carnicos",fontweight='bold', fontsize=16)
+    plt.title("Precio promedio de los cárnicos",fontweight='bold', fontsize=16)
 
 
     plt.xlabel("Precios",fontweight='bold', fontsize=12)
@@ -103,7 +103,7 @@ def barra_apilada(producto, carbohidratos, proteínas, grasa):
     fig.tight_layout() 
 
     #Títulos y Etiquetas:
-    ax.set_title("Precios promedio g/$ por macronutriente",fontweight='bold', fontsize=17)
+    ax.set_title("Precios de obtener 1g de los macronutrientes de los productos",fontweight='bold', fontsize=17)
     ax.set_xlabel("Productos",fontweight='bold', fontsize=12)
     ax.set_ylabel("Precios",fontweight='bold',  fontsize=12)
 
