@@ -32,23 +32,23 @@ Se analizaron 17 productos en 30 mipymes de Plaza de la Revolución, Centro Haba
 
 Los datos se guardaron en ***mipymes.json***. Su estrucura es:
 
-La llave `mipyme` es la principal del json y contiene una lista con varios diccionarios, cada diccionario es una mipyme diferente. En cada mipyme encontramos las siguientes llaves:
+La llave `mipyme` es la principal del json y contiene una lista con varios diccionarios, cada diccionario es una mipyme diferente. En cada mipyme encontramos las siguientes llaves con el tipo de dato de guarda:
 
- `id`: para identificar el número de identidad de la mipyme,
+ `id`: para identificar el número de identidad de la mipyme (float)
 
-`nombre`: para registrar el nombre de la mipyme, 
+`nombre`: para registrar el nombre de la mipyme (string), 
 
-`ubicación`: tiene como valor una serie de números que es la ubibación en el mapa de Google maps para poder encontrar la mipyme,
+`ubicación`: tiene como valor una serie de números que es la ubibación en el mapa de Google maps para poder encontrar la mipyme  (string),
 
 `productos`:  es una lista que contiene diccionarios, cada diccionario es un producto diferente. En estos diccionarios hay como llave:
 
-`nombre`: para registrar el nombre del producto,
+`nombre`: para registrar el nombre del producto(string),
 
-`cantidad`:para guardar la cantidad en gramos o las unidades en caso del huevo,
+`cantidad`:para guardar la cantidad en gramos o las unidades en caso del huevo (float),
 
-`unidad`: aquí está el peso de medida que casi siempre es en gramos excepto el huevo que se registra en unidad,
+`unidad`: aquí está el peso de medida que casi siempre es en gramos excepto el huevo que se registra en unidad (string)
 
-`precio`: es el costo en cup del producto
+`precio`: es el costo en cup del producto (float)
 
 Los datos fueron obtenidos desde finales de noviembre y principios de diciembre del 2025.
 
@@ -62,17 +62,24 @@ Tambien se analizaron entre frutas y verduras 6 diferente y se guardaron en el a
 - Tomate
 - Zanahoria
 
-La estructura del archivo esta divido en 2 llaves principales, `frutas` y `verduras`, cada uno tiene una lista donde cada diccionario es un producto diferente asociado al tipo de alimento. Las claves son:
-`unit`: Es la unidad de medida del producto
+La estructura del archivo esta divido en 2 llaves principales, `frutas` y `verduras`, cada uno tiene una lista donde cada diccionario de este es un producto diferente asociado al tipo de alimento. Las claves son y el tipo de dato que guardason:
 
-`cantidad`: Es la cantidad de la unidad de medida.
+`unit`: Es la unidad de medida del producto (string)
 
-`precio`: Es el precio del producto asociado a la cantidad 
+`cantidad`: Es la cantidad de la unidad de medida (float)
+
+`precio`: Es el precio del producto asociado a la cantidad (float)
 
 
-Estos alimentos frecuentes en el mercado cubano y pertenecen a los grupos que la [OMS](https://www.who.int/es/news-room/fact-sheets/detail/healthy-diet) reconoce como necesarios para una dieta saludable, con el propósito de evaluar la relación costo-beneficio nutricional de cada uno.
+Estos alimentos son frecuentes en el mercado cubano y pertenecen a los grupos que la [OMS](https://www.who.int/es/news-room/fact-sheets/detail/healthy-diet) reconoce como necesarios para una dieta saludable.
 
-La base de datos utilizada estan guardadas en un archivo .json
+Los datos de  ***evoluvión_precios.json*** en cada llave principal está la fecha donde se registró el precio de los productos, y contiene otra llave para asociar el nombre del producto que se va a guardar. Los productos guardados en este archivo son: arroz, huevo, lomo de cerdo, pierna de cerdo, frijoles negros y frijoles colorados. 
+
+La clave `unit` es la unidad de peso del producto que son *lb* para referirse a 1 libra del producto y *unidad* para asociar solamente a 1 huevo. (string)
+
+La clave `min` y `max` es el precio mínimo y máximo registrado en el mes correspondiente a la llave de la fecha. 
+Estos datos están registrados desde enero del 2024 hasta noviembre 2025 en la [ONEI](https://www.onei.gob.cu/publicaciones-economico?field_categoria_de_temas_target_id=495&field_year_value=2025&title=). 
+
 
 El archivo ***valor_nutricional.json*** contiene los datos nutricionales principales (grasas, proteínas y carbohidratos) para cada producto. Por general, estos valores corresponden a una porción de 100 gramos del alimento en crudo. Las excepciones son: el huevo, cuyos datos se obtuvieron por unidad; el atún, por los nutrientes de una lata; el muslo de pollo, considerando solo la carne sin hueso; la leche en polvo, cuya cantidad de 40 gramos (equivalente a 2 cucharadas con una pequena loma) necesaria para preparar un vaso de 8 onzas o 240 ml y la azucar es el valor nutricional de 1 cucharada (15 gramos).
 
@@ -80,17 +87,38 @@ Cada llave del json es el nombre del producto, las claves son los macronutriente
 Se tomaron los datos a partir de las etiquetas de los productos y también por la aplicación [Fitia](https://fitia.app/es/). 
 
 
-Los datos de la ***evoluvión_precios.json*** en cada llave principal está la fecha donde se registró el precio de los productos y contiene otra llave para asociar el nombre del producto que se va a guarda. Los productos guardados en este archivo son: arroz, huevo, lomo de cerdo, pierna de cerdo, frijoles negros y frijoles colorados. 
-
-La clave `unit` es la unidad de peso del producto que son *lb* para referirse a 1 libra del producto y *unidad* para asociar solamente a 1 huevo. 
-
-La clave `min` y `max` es el precio mínimo y máximo registrado en el mes correspondiente a la llave de la fecha. 
-Estos datos están registrados desde enero del 2024 hasta noviembre 2025 en la [ONEI](https://www.onei.gob.cu/publicaciones-economico?field_categoria_de_temas_target_id=495&field_year_value=2025&title=). 
 
 
-### Funciones programadas utilizadas en el Análisis 
+### Funciones programadas utilizadas en el análisis 
 
-La función **costo_promedio_nutr** fue creada para conocer el precio de obtener 1 gramo del macronutriente que el usuario desea analizar. Además revela cuales los alimentos más económicos con mayor cantidad del macronutriente. La funcón se basa en las siguiente formula:
+
+
+***cargar_json***: Esta función es para cargar los datos necesarios en el archivo *análisis.ipynb* para el proyecto
+
+***frutas***: Calcula el costo para consumir 10 libras de cada una de las frutas durante 30 días. Los datos necesarios se obtuvieron a partir del arhcivo *frutas_verduras*.
+
+***verduras***: Retorna el costo de consumir 100g de remolacha, pepino, tomate y zanahoria. Para ello primero se obtiene el costo de consumir 1g de cada verdura y luego se multiplica por 100 que es la cantidad de gramos a consumir. Los datos se obtuvieron a partir del arhcivo *frutas_verduras*
+
+***leche en polvo**: Retorna el precio de obtener 1 vaso de 8oz o 240ml de leche a partir de una bolsa de leche en polvo de 1kg su valor nutricional y la cantidad de vasos que puedes hacer con una bolsa. Para obtener este resultado primero se obtiene el precio de obtener 15 g de azúcar y 40 g de leche en polvo, que son los necesarios para preparar un vaso (sin tener en cuenta la proporción infantil), luego se suma este costo y se obtiene el resultado esperado. Además si divides 40g entre 1000g obtienes la cantidad de vasos que puedes hacer con una bolsa de 1kg de leche en polvo y el valor nutricional es la suma de los nutrientes del archvio *valor_nutricional.json".
+
+
+***datos_evolución_precios***: Es utilizada para limpiar los datos del archivo "evolución_precios.josn" para graficar la evolución del precio del huevo. Retorna 2 listas una de con las fechas donde se registró el precio y la otra con los precios promediodonde coincide los indices. 
+
+
+***calcuar_macronutrientes***:
+A partir de la cantidad de kcal que el usuario incerte en el argumento de la función, esta devuelve la cantidad en gramo de proteina, grasa y carbohidrato que este usuario debe consumir diario. Para ello se utilizaron los datos a partir de un articulo publicado por la [Dirección General de Salud Pública de Madrid, España](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.comunidad.madrid/sites/default/files/doc/sanidad/1._valor_energetico_saber_mas.pdf&ved=2ahUKEwj3kZS22PORAxWuSTABHQuFO2oQFnoECBwQAw&usg=AOvVaw0c4toutOgq-dTvHpn6qLhp) donde 1 gramo de proteina y carbohidrato aporta 4 kcal y 1 gramo de grasas 9 kcal. Para obtener la cantidad de cada macronutriente se utilizó la siguiente fórmula
+
+cantidad_macronutriente =(PM/100 * kcal) / A
+
+-PM es la proporción en % del macronutriente que se necesita 
+-Kcal es la cantidad de kilocalorías que el usurio debe consumir diario
+-A es la cantidad de kcal que aporta el macronutriente que se necesita
+
+***precio_promedio_lb***: tiene como objetivo calcular el precio promedio que una persona debe gastar en comprar 1 libra de cada producto de las mipymes. Excepto las latas de atún ya que el peso escurrido de las diferentes latas de atún de todas las mipymes nunca llega a 1 libra, por eso el análisis se basa en el precio promedio para comprar 1 lata. Además el resultado del de huevo es el promedio del valor de una unidad y en el caso de la leche en polvo es el precio promedio de obtener una bolsa de 1 kg. 
+Para obtener este resultado primero se itera en una lista que contiene los productos para anlizar, luego en el diccionario *mipyme* donde estan todos los datos necesario y luego en una lista interna de esta base de datos (*productos*) donde estan los productos de las mipymes. En cada iteración de la lista que contiene los productos se busca su precio en todas las mipymes, se añaden a una lista y luego se calcula su precio promedio. En el caso de las excepciones se utiliza una condición para que cuando la ieración interna sea uno de esos productos se calcule de forma independiente.
+
+
+***costo_promedio_nutr***: fue creada para conocer el precio de obtener 1 gramo del macronutriente que el usuario desea analizar. Además revela cuales los alimentos más económicos con mayor cantidad del macronutriente. La funcón se basa en las siguiente formula:
 
 *cantidad total de macronutriente = (valor nutricional del producto /100) * Cantidad total en gramos del producto*
 
@@ -107,21 +135,16 @@ A diferencia de otros alimentos donde el peso varía y determina la cantidad tot
 En cada iteración, se busca el producto correspondiente en todas las MiPYMEs disponibles. Por cada coincidencia encontrada, se calcula el costo de obtener un gramo del macronutriente seleccionado y se añade a una lista. Una vez finalizada la búsqueda en todos los establecimientos, se calcula el promedio de los costos almacenados, se redondea el valor y se devuelve como el resultado final esperado.
 
 
-**calcuar_macronutrientes**:
-A partir de la cantidad de kcal que el usuario incerte en el argumento de la función, esta devuelve la cantidad en gramo de proteina, grasa y carbohidrato que este usuario debe consumir diario. Para ello se utilizaron los datos a partir de un articulo publicado por la [Dirección General de Salud Pública de Madrid, España](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.comunidad.madrid/sites/default/files/doc/sanidad/1._valor_energetico_saber_mas.pdf&ved=2ahUKEwj3kZS22PORAxWuSTABHQuFO2oQFnoECBwQAw&usg=AOvVaw0c4toutOgq-dTvHpn6qLhp) donde 1 gramo de proteina y carbohidrato aporta 4 kcal y 1 gramo de grasas 9 kcal. Para obtener la cantidad de cada macronutriente se utilizó la siguiente fórmula
-
-cantidad_macronutriente =(PM/100 * kcal) / A
-
--PM es la proporción en % del macronutriente que se necesita 
--Kcal es la cantidad de kilocalorías que el usurio debe consumir diario
--A es la cantidad de kcal que aporta el macronutriente que se necesita
 
 
-La función **precio_promedio_lb** tiene como objetivo calcular el precio promedio que una persona debe gastar en comprar 1 libra de cada producto. Pero el peso escurrido de las diferentes latas de atún de todas las mipymes nunca llega a 1 libra, por eso el análisis se basa en el precio promedio para comprar 1 lata. El resultado del de huevo es el promedio del valor de una unidad.
 
-**datos_evolución_precio**
-En esta función se preparan los datos necesarios para la gráfica de líneas donde muestra la evolución de los precios del huevo 
-Retorna una lista con todas las fechas registradas de los precios de los productos y otra lista con el precio promedio en los productos. Ambas listas coinciden en la misma posición el precio de los productos con la fecha correspondiente.
+
+
+
+
+
+
+
 
 
 

@@ -3,6 +3,11 @@ import json
 
 
 def cargar_json(ruta_relativa):
+    """
+    Docstring for cargar_json
+    
+    :param ruta_relativa: La ruta donde se encuentra la carpeta con la base de dato
+    """ 
     with open(ruta_relativa, "r" , encoding="utf-8") as archivo:
         dato = json.load(archivo)
     return dato
@@ -17,7 +22,7 @@ def frutas(platano=129, fruta_bomba=150, guayaba=200):
     :param fruta_bomba: Precio de 1 libra
     :param guayaba: Precio de 1 libra
     """
-    p = platano * 10 # Obtener el costo de consumir 
+    p = platano * 10 # Obtener el costo de consumir 10 libras de cada fruta
     f = fruta_bomba * 10
     g = guayaba * 10
 
@@ -84,11 +89,11 @@ def leche_polvo(precio_leche, precio_azucar):
 
 
 
-def datos_evolución_precios(precios, producto):
+def datos_evolución_precios(precios):
     """
     Calcula el precio promedio mensual de un producto específico a lo largo del tiempo.
 
-    El argumento "precios" es un diccionario donde las claves son meses y los valores son el precio de los productos.
+    El argumento "precios" se utiliza para cargar los datos del archivo "evolución_precios.josn"
 
     El argumento "producto" es el nombre del producto para el cual se desea ver la evolución de precios.
 
@@ -100,8 +105,8 @@ def datos_evolución_precios(precios, producto):
     
     for mes in precios.keys(): #iterar sobre cada mes en el diccionario de precios, cada llave principal es un mes
 
-        if producto == "huevo" and producto in precios[mes]: #Verificar si el producto existe en ese mes
-            datos_producto = precios[mes][producto] #Obtener los datos del producto en ese mes
+        if "huevo" in precios[mes]: #Verificar si el producto existe en ese mes
+            datos_producto = precios[mes]["huevo"] #Obtener los datos del producto en ese mes
 
             promedio = (round((datos_producto["min"] + datos_producto["max"]) / 2)) * 30 #multiplicar por 30 para obtener el precio del cartón
 
@@ -130,16 +135,7 @@ def calcular_macronutrientes(kcal):
 
 
 
-def precio_promedio_lb(listado_de_productos, mipyme):
-
-    """
-    Calcula el precio promedio de 1 libra de cada  prodcutos,
-
-    El valor del huevo se tiene en cuenta por una unidad,
-
-    En caso de las latas de atún como su peso es menor a de una libra, el analisis seria para saber el precio promedio para comprar una lata de atun
-
-    """
+def precio_promedio_lb(listado_de_productos, mipyme):   
 
 
     output = {}
@@ -151,23 +147,23 @@ def precio_promedio_lb(listado_de_productos, mipyme):
                 #print(products)
         
                 if producto == "huevo" and products["nombre"] == "huevo":
-                    precio_unidad = round((float(products["precio"]))/ 30) # El cartón de huevo siempre tiene 30 unidades
+                    precio_unidad = round((products["precio"]))/ 30 # El cartón de huevo siempre tiene 30 unidades
                     
                     lista_precio.append(precio_unidad) 
                     break
 
 
                 elif producto == "atún" and products["nombre"] == "atún":  
-                    lista_precio.append(float(products["precio"]))
+                    lista_precio.append(products["precio"])
                     break
 
                 elif producto == "leche en polvo" and products["nombre"] == "leche en polvo":
-                    lista_precio.append(float(products["precio"]))
+                    lista_precio.append(products["precio"])
                     break
                     
                 elif products["nombre"] == producto and producto!= "huevo" and producto !="atún" and producto != "leche en polvo":
-                    lb = float(products["cantidad"]) / 453.592 #Convertir en float los datos necesrios porque python los reconoce como str
-                    precio_lb = float(products["precio"]) / lb
+                    lb = (products["cantidad"]) / 453.592 #Convertir en float los datos necesrios porque python los reconoce como str
+                    precio_lb = (products["precio"]) / lb
                     lista_precio.append(precio_lb)
                 
                     
